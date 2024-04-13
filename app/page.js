@@ -32,8 +32,6 @@ function HomePage() {
       setErrors({ email: emailError, password: passwordError });
       return;
     }
-
-    // Handle form submission logic here
   };
 
   return (
