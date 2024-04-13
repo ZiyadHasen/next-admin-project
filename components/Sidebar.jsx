@@ -1,0 +1,54 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import logo from '@/images/Logo.png';
+import Image from 'next/image';
+
+const Sidebar = ({ children }) => {
+  return (
+    <>
+      <div className='border-6 shadow-lg flex justify-between p-4'>
+        <Image src={logo} alt='logo' className='object-cover h-full' />
+
+        <div className='flex'>
+          <div className='text-sm font-bold mx-1 tracking-tight'>홍길동 님</div>
+          <div className='text-sm font-light mx-1 tracking-tight text-neutral-400'>
+            (정보수정)
+          </div>
+          <div className='text-sm font-light mx-1 px-2 border-l-2 border-r-2 border-neutral-400 text-neutral-400'>
+            최근접속:2022-12-23 14:35
+          </div>
+          <div className='text-sm font-bold text-neutral-500 mx-1 tracking-tight'>
+            로그아웃
+          </div>
+        </div>
+      </div>
+      <div className='flex'>
+        <div className='text-black h-screen bg-white py-14 px-6 border w-[13rem]'>
+          <div className='mb-4'>
+            <div className='flex items-center gap-1'>
+              <div className='w-5 h-5 rounded-full bg-gray-400 mr-2'></div>
+              <h1 className='font-medium text-gray-600 text-base'>Admin</h1>
+            </div>
+            <ul className='ml-7'>
+              <li className='flex my-1 ml-2 font-normal text-16 '>
+                <span className='self-start text-xs'>&#x221F;</span>
+                <span className='ml-1'>
+                  <Link href='/admin/user'>User</Link>
+                </span>
+              </li>
+              <li className='flex my-1 ml-2 font-normal text-16'>
+                <span className='self-start text-xs'>&#x221F;</span>
+                <span className='ml-1'>
+                  <Link href='/admin/dashboard'>Dashboard</Link>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {children}
+      </div>
+    </>
+  );
+};
+
+export default Sidebar;
