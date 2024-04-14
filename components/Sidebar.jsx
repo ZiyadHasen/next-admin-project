@@ -30,17 +30,11 @@ const Sidebar = ({ children }) => {
               <h1 className='font-medium text-gray-600 text-base'>운영 관리</h1>
             </div>
             <ul className='ml-7 mt-2'>
-              <li className='flex my-1 ml-2 font-normal text-16 '>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/users/user-1'>관리자 관리</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16 '>
+                <Link href='/admin/users/user-1'>└ 관리자 관리</Link>
               </li>
-              <li className='flex my-1 ml-2 font-normal text-16'>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/users/user-2'>시리얼 넘버 관리</Link>
-                </span>
+              <li className='my-1 ml-2 font-normal text-16'>
+                <Link href='/admin/users/user-2'>└ 시리얼 넘버 관리</Link>
               </li>
             </ul>
           </div>
@@ -50,17 +44,11 @@ const Sidebar = ({ children }) => {
               <h1 className='font-medium text-gray-600 text-base'>회원 관리</h1>
             </div>
             <ul className='ml-7'>
-              <li className='flex my-1 ml-2 font-normal text-16 '>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/user'>회원 관리</Link>
-                </span>
+              <li className='my-1 ml-2 font-normal text-16 '>
+                <Link href='/admin/user'>└ 회원 관리</Link>
               </li>
-              <li className='flex my-1 ml-2 font-normal text-16'>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/dashboard'>기기 관리</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16'>
+                <Link href='/admin/dashboard'>└ 기기 관리</Link>
               </li>
             </ul>
           </div>
