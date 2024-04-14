@@ -67,85 +67,60 @@ const Sidebar = ({ children }) => {
           <div className='mb-4'>
             <div className='flex items-center gap-1'>
               <div className='w-5 h-5 rounded-full bg-gray-400 mr-2'></div>
-              <h1 className='font-medium text-gray-600 text-base'>Admin</h1>
+              <h1 className='font-medium text-gray-600 text-base'>
+                사용기록 관리
+              </h1>
             </div>
             <ul className='ml-7'>
-              <li className='flex my-1 ml-2 font-normal text-16 '>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/user'>User</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16 '>
+                <Link href='/admin/user'>└ 사용기록 관리</Link>
               </li>
-              <li className='flex my-1 ml-2 font-normal text-16'>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/dashboard'>Dashboard</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16'>
+                <Link href='/admin/dashboard'>└ 미션 관리</Link>
               </li>
-              <li className='flex my-1 ml-2 font-normal text-16'>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/dashboard'>Dashboard</Link>
-                </span>
+              <li className='my-1 ml-2 font-normal text-16'>
+                <Link href='/admin/dashboard'>└ 쿠폰 관리</Link>
               </li>
-              <li className='flex my-1 ml-2 font-normal text-16'>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/dashboard'>Dashboard</Link>
-                </span>
+              <li className='my-1 ml-2 font-normal text-16'>
+                <Link href='/admin/dashboard'>└ 쿠폰 발급 관리</Link>
               </li>
             </ul>
           </div>
           <div className='mb-4'>
             <div className='flex items-center gap-1'>
               <div className='w-5 h-5 rounded-full bg-gray-400 mr-2'></div>
-              <h1 className='font-medium text-gray-600 text-base'>Admin</h1>
+              <h1 className='font-medium text-gray-600 text-base'>앱 관리</h1>
             </div>
             <ul className='ml-7'>
-              <li className='flex my-1 ml-2 font-normal text-16 '>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/user'>User</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16 '>
+                <Link href='/admin/user'>└ 가이드 관리</Link>
               </li>
-              <li className='flex my-1 ml-2 font-normal text-16 '>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/user'>User</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16 '>
+                <Link href='/admin/user'>└ FAQ 관리</Link>
               </li>
-              <li className='flex my-1 ml-2 font-normal text-16 '>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/user'>User</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16 '>
+                <Link href='/admin/user'>└ 쇼핑 관리</Link>
+              </li>
+              <li className='my-1 ml-2 font-normal text-16 '>
+                <Link href='/admin/user'>└ 약관 관리</Link>
               </li>
 
-              <li className='flex my-1 ml-2 font-normal text-16'>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/dashboard'>Dashboard</Link>
-                </span>
+              <li className='my-1 ml-2 font-normal text-16'>
+                <Link href='/admin/dashboard'>└ 팝업 관리</Link>
               </li>
             </ul>
           </div>
           <div className='mb-4'>
             <div className='flex items-center gap-1'>
               <div className='w-5 h-5 rounded-full bg-gray-400 mr-2'></div>
-              <h1 className='font-medium text-gray-600 text-base'>Admin</h1>
+              <h1 className='font-medium text-gray-600 text-base'>통계 관리</h1>
             </div>
             <ul className='ml-7'>
-              <li className='flex my-1 ml-2 font-normal text-16 '>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/user'>User</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16 '>
+                <Link href='/admin/user'>└ 회원/기기 통계</Link>
               </li>
-              <li className='flex my-1 ml-2 font-normal text-16'>
-                <span className='self-start text-xs'>&#x221F;</span>
-                <span className='ml-1'>
-                  <Link href='/admin/dashboard'>Dashboard</Link>
-                </span>
+              <li className=' my-1 ml-2 font-normal text-16'>
+                <Link href='/admin/dashboard'>└ 접속/사용 통계</Link>
               </li>
             </ul>
           </div>
