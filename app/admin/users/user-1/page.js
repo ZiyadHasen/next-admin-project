@@ -33,7 +33,7 @@ function Page() {
             <Image src={spin} alt='spin' width={24} height={24} />
           </div>
           {/* second */}
-          <div className='flex flex-wrap gap-8 justify-between mb-4'>
+          <div className='flex flex-wrap mb-4 gap-8 justify-between '>
             <div className='flex-col bg-white my-4 flex-1'>
               <div className='flex border-b-2 p-4 justify-between w-full'>
                 <h1 className='text-lg text-gray-600 font-bold '>
