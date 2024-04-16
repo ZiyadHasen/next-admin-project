@@ -137,7 +137,7 @@ function Page() {
 
               {/* fourth */}
 
-              <div className='h-[30px] flex flex-shrink items-center border-b-[2px] border-gray-400 mt-4'>
+              <div className='h-[30px]  gap-[4rem] flex flex-shrink justify-between items-center w-1/3 border-b-[2px] border-gray-400 mt-4'>
                 <div className='text-gray-600 text-sm font-bold flex-shrink mr-4'>
                   등록일시
                 </div>

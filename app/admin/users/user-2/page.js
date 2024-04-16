@@ -4,7 +4,7 @@ import Sidebar from '../../../../components/Sidebar';
 // import svg from '../../images/nike.svg';
 import Image from 'next/image';
 import Date from '../../../../components/Date';
-import Table from '../../../../components/datatable';
+import Table from '../../../../components/datatable2';
 
 function Page() {
   return (
