@@ -100,7 +100,7 @@ const DataTable = () => {
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          <Image src={PrevArr}></Image>
+          <Image src={PrevArr} alt='arrow'></Image>
         </button>
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
           <button
@@ -116,7 +116,7 @@ const DataTable = () => {
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
-          <Image src={ForwArr}></Image>
+          <Image src={ForwArr} alt='arrow'></Image>
         </button>
       </div>
     </div>
