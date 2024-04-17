@@ -1,3 +1,4 @@
+
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -94,7 +95,7 @@ function HomePage() {
             <Link href='/admin'>
               <button
                 type='submit'
-                className='w-full py- px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none'
+                className='w-full py-2 mt-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-button hover:bg-gray-700 focus:outline-none'
               >
                 로그인
               </button>
