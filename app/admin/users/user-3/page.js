@@ -29,16 +29,16 @@ function Page() {
                     <input
                       type='text'
                       placeholder='00001'
-                      className='input text-gray-600 h-[28px] w-[280px] mb-1 border-none active:border-none focus:border-none rounded-none'
+                      className='input text-gray-600 h-[28px] w-[200px] mb-1 border-none active:border-none focus:border-none rounded-none'
                     />
                   </div>
                 </div>
 
                 <div className='flex-1 flex items-center justify-between pb-4 border-b-[2px]  border-gray-400'>
-                  <div className='text-gray-600 text-sm font-bold mr-4'>
+                  <div className='text-gray-600 text-sm font-bold  w-[180px]'>
                     등록일시
                   </div>
-                  <div className='ml-6'>
+                  <div className='ml-6 '>
                     <Date height={12} />
                   </div>
                 </div>
@@ -55,7 +55,7 @@ function Page() {
                     <input
                       type='text'
                       placeholder='name@domain.co.kr'
-                      className='input focus:border-transparent px-2 border-gray-300 active:border-none focus:border-none bg-gray-50 text-gray-600 h-[28px] w-[280px] mb-1 rounded-none'
+                      className='input focus:border-transparent px-2 border-gray-300 active:border-none focus:border-none bg-gray-50 text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
                     />
                   </div>
                 </div>
@@ -67,7 +67,7 @@ function Page() {
                     <input
                       type='text'
                       placeholder='********'
-                      className='input focus:border-transparent px-2 border-gray-300 active:border-none focus:border-none bg-gray-50 text-gray-600 h-[28px] w-[280px] mb-1 rounded-none'
+                      className='input focus:border-transparent px-2 border-gray-300 active:border-none focus:border-none bg-gray-50 text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
                     />
                   </div>
                 </div>
@@ -79,7 +79,7 @@ function Page() {
                     <input
                       type='text'
                       placeholder='*********'
-                      className='input focus:border-transparent px-2 border-gray-300 active:border-none focus:border-none bg-gray-50 text-gray-600 h-[28px] w-[280px] mb-1 rounded-none'
+                      className='input focus:border-transparent px-2 border-gray-300 active:border-none focus:border-none bg-gray-50 text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
                     />
                   </div>
                 </div>

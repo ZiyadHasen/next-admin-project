@@ -117,10 +117,10 @@ function Page() {
           <Table />
         </div>
         <div className='flex justify-center  py-6 items-center my-[2rem]  bg-white h-[52px] shadow-inner  border-t-[2px] border-gray-400'>
-          <button className='font-bold mx-4 text-center text-sm text-white bg-button px-[5rem] py-2 rounded-[5px]'>
+          <button className='font-bold mx-4 text-center text-sm text-white bg-button hover:bg-gray-500 px-[5rem] py-2 rounded-[5px]'>
             관리자 등록
           </button>
-          <button className='font-bold text-center mx-4 text-sm text-white bg-button px-[5rem] py-2 rounded-[5px]'>
+          <button className='font-bold text-center mx-4 text-sm text-white bg-button hover:bg-gray-500 px-[5rem] py-2 rounded-[5px]'>
             관리자 등록
           </button>
         </div>

@@ -5,8 +5,6 @@ import locale from 'antd/lib/date-picker/locale/en_US';
 function Date2() {
   const [dateVisible, setDateVisible] = useState(false);
 
-  
-
   const handleOpenChange = (status) => {
     setDateVisible(status);
   };
@@ -15,9 +13,8 @@ function Date2() {
     <Space className='date-range' size='small'>
       <DatePicker
         locale={locale}
-        className='h-[40px]  text-gray-400 m-0 border-none'
+        className='h-[30px] py-0 text-gray-500 mb-2 m-0 border-none'
         showTime
-       
         onOpenChange={handleOpenChange}
         visible={dateVisible}
       />

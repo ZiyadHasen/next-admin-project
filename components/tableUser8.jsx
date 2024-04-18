@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { data } from '../data/table-data';
+import { data } from '../data/tableDataUser8';
 import ForwArr from '../images/forwarArrow.svg';
 import PrevArr from '../images/double-arrow-p.svg';
 import Image from 'next/image';
 
 const DataTable2 = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [header3Option, setHeader3Option] = useState(0);
-  const [header6Option, setHeader6Option] = useState(0);
+  const [header2Option, setHeader2Option] = useState(0);
+  const [header7Option, setHeader7Option] = useState(0);
   const [tableData] = useState(data);
 
   const itemsPerPage = 10;
@@ -32,35 +32,17 @@ const DataTable2 = () => {
         <thead>
           <tr className='bg-transparent'>
             <th className='border py-2'>No</th>
-            <th className='border px-4 py-2'>계정</th>
-            <th className='border px-4 py-2'>
-              <select
-                className='border bg-inherit px-4 py-2'
-                onChange={(e) => setHeader3Option(Number(e.target.value))}
-              >
-                <option value={0}>Option 1</option>
-                <option value={1}>Option 2</option>
-                <option value={2}>Option 3</option>
-              </select>
-            </th>
-            <th className='border px-4 py-2'>연락처</th>
-            <th className='border px-4 py-2'>접근기간</th>
-            <th className='border px-4 py-2'>
-              <select
-                className=' border px-4 bg-inherit py-2 focus:border-none hover:border-none'
-                onChange={(e) => setHeader6Option(Number(e.target.value))}
-              >
-                <option value={0}>Option 1</option>
-                <option value={1}>Option 2</option>
-                <option value={2}>Option 3</option>
-              </select>
-            </th>
-            <th className='border px-4 py-2'>노출 여부</th>
-            <th className='border px-4 py-2'>등록일시</th>
+
+            <th className='border px-4 py-2'>모델명</th>
+            <th className='border px-4 py-2'>제품번호</th>
+            <th className='border px-4 py-2'>시리얼 넘버</th>
+            <th className='border px-4 py-2 text-center'>기기 등록 일시</th>
+            <th className='border px-4 py-2'>주계정</th>
+            <th className='border px-4 py-2'>부계정</th>
           </tr>
         </thead>
-        <tbody>
-          {currentData.map((item) => (
+        <tbody className='border-b-2 border-gray-500'>
+          {currentData.map((item, index) => (
             <tr
               className='bg-white text-center text-sm border border-gray-100 px-4 py-2'
               key={item.id}
@@ -71,23 +53,22 @@ const DataTable2 = () => {
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col2}
               </td>
-              <td className='border text-center text-sm text-blue-400 border-gray-100 px-4 py-2'>
-                {handleColumnChange(item.col3Options, header3Option)}
+
+              <td className='border text-center text-sm  border-gray-100 px-4 py-2'>
+                {item.col3}
               </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm text-blue-600 border-gray-100 px-4 py-2'>
                 {item.col4}
               </td>
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col5}
               </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
-                {handleColumnChange(item.col6Options, header6Option)}
+              <td className='border text-center text-sm text-green-600 border-gray-100 px-4 py-2'>
+                {item.col6}
               </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+
+              <td className='border text-center text-sm text-green-600 border-gray-100 px-4 py-2'>
                 {item.col7}
-              </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
-                {item.col8}
               </td>
             </tr>
           ))}
