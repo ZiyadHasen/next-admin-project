@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import logo from '@/images/Logo.png';
+import logo from '../data/images/Logo.png';
 import Image from 'next/image';
 
 const Sidebar = ({ children }) => {

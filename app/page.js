@@ -1,8 +1,7 @@
-
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/images/Logo.png';
+import logo from '../data/images/Logo.png';
 import { useState } from 'react';
 
 function HomePage() {

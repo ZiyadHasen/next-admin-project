@@ -4,7 +4,7 @@ import { Col, Row, Space, Layout } from 'antd';
 import dayjsGenerateConfig from 'rc-picker/lib/generate/dayjs';
 import generatePicker from 'antd/es/date-picker/generatePicker';
 import locale from 'antd/es/date-picker/locale/en_US';
-import calander from '../images/calander.svg';
+import calander from '../data/images/calander.svg';
 import Image from 'next/image';
 
 const DatePicker = generatePicker(dayjsGenerateConfig);

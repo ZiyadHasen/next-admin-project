@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Sidebar from '../../components/Sidebar';
-import svg from '../../images/nike.svg';
+import svg from '../../data/images/spin.svg';
 import Image from 'next/image';
 import Date from '../../components/Date';
 import Table from '../../components/datatable';
