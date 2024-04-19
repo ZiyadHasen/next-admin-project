@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Sidebar from '../../../../components/Sidebar';
-import spin from '../../../../images/spin.svg';
+import spin from '../../../../data/images/spin.svg';
 import Image from 'next/image';
 
 function Page() {

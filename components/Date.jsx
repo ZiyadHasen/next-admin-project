@@ -38,7 +38,7 @@ const Date = () => {
       <p className='m-0 text-gray-500'>~</p>
       <DatePicker
         locale={locale}
-        className='h-[40px m-0 border-none'
+        className='h-[40px] m-0 border-none'
         onChange={onChangeEndDate}
       />
     </Space>
