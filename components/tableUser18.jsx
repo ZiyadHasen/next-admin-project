@@ -1,43 +1,63 @@
 import React, { useState } from 'react';
-import { data } from '../data/tableDataUser16';
-
-// import ForwArr from '../images/forwarArrow.svg';
-// import PrevArr from '../images/double-arrow-p.svg';
+import { data } from '../data/tableDataUser18';
 import ForwArr from '../data/images/forwarArrow.svg';
 import PrevArr from '../data/images/double-arrow-p.svg';
-
 import Image from 'next/image';
 
 const DataTable2 = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [header2Option, setHeader2Option] = useState(0);
-  const [header3Option, setHeader3Option] = useState(0);
+  const [header4Option, setHeader4Option] = useState(0);
   const [header5Option, setHeader5Option] = useState(0);
-  const [header6Option, setHeader6Option] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
 
-  const itemsPerPage = 10;
+  const handleColumnChange = (columnOptions, selectedIndex) => {
+    return columnOptions[selectedIndex];
+  };
+
+  const handleItemsPerPageChange = (value) => {
+    setItemsPerPage(value);
+    setCurrentPage(1); // Reset to the first page when changing items per page
+  };
+
   const totalPages = Math.ceil(data.length / itemsPerPage);
-
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-
   const currentData = data.slice(startIndex, endIndex);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
-  const handleColumnChange = (columnOptions, selectedIndex) => {
-    return columnOptions[selectedIndex];
-  };
-
   return (
     <div className='container mx-auto'>
+      <div className='mb-4 flex justify-between px-4 mt-[4rem] pb-2  border-b-[2px] border-gray-400'>
+        <h1 className='font-bold text-base  text-black'>
+          검색 {data.length}개
+        </h1>
+
+        <select
+          className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:border-none hover:border-none'
+          onChange={(e) => handleItemsPerPageChange(Number(e.target.value))}
+        >
+          <option value={10} className='text-sm' selected={itemsPerPage === 10}>
+            10개 보기
+          </option>
+          {/* 
+          <option value={20} className='text-sm'>
+            20개 보기
+          </option>
+          <option value={30} className='text-sm'>
+            30개 보기
+          </option>
+          ... 
+          */}
+        </select>
+      </div>
       <table className='min-w-full border-collapse border text-gray-600 border-gray-300'>
         <thead>
           <tr className='bg-transparent'>
             <th className='border py-2'>No</th>
-
             <th className='border  py-2'>
               <select
                 className='border bg-inherit px-4 py-2'
@@ -48,21 +68,11 @@ const DataTable2 = () => {
                 <option value={2}>Option 3</option>
               </select>
             </th>
-            <th className='border  py-2'>
-              <select
-                className='border bg-inherit px-4 py-2'
-                onChange={(e) => setHeader3Option(Number(e.target.value))}
-              >
-                <option value={0}>가이드 종류</option>
-                <option value={1}>Option 2</option>
-                <option value={2}>Option 3</option>
-              </select>
-            </th>
             <th className='border py-2'>제목</th>
             <th className='border px-0 py-2'>
               <select
                 className=' border px-0 bg-inherit py-2 focus:border-none hover:border-none'
-                onChange={(e) => setHeader5Option(Number(e.target.value))}
+                onChange={(e) => setHeader4Option(Number(e.target.value))}
               >
                 <option value={0}>노출 순서</option>
                 <option value={1}>Option 2</option>
@@ -72,7 +82,7 @@ const DataTable2 = () => {
             <th className='border px-4 py-2'>
               <select
                 className=' border px-4 bg-inherit py-2 focus:border-none hover:border-none'
-                onChange={(e) => setHeader6Option(Number(e.target.value))}
+                onChange={(e) => setHeader5Option(Number(e.target.value))}
               >
                 <option value={0}>노출</option>
                 <option value={1}>Option 2</option>
@@ -107,31 +117,31 @@ const DataTable2 = () => {
               </td>
               <td
                 className={`border text-center text-sm border-gray-100 px-4 py-2 ${
-                  index >= itemsPerPage - 6 ? 'text-gray-400' : 'text-gray-600 '
-                }`}
-              >
-                {handleColumnChange(item.col3Options, header3Option)}
-              </td>
-              <td
-                className={`border text-center text-sm border-gray-100 px-4 py-2 ${
                   index >= itemsPerPage - 6 ? 'text-blue-300' : 'text-blue-500 '
                 }`}
               >
-                {item.col4}
+                {item.col3}
               </td>
               <td
                 className={`border-b text-center text-sm border-gray-200 px-4 py-2 ${
                   index >= itemsPerPage - 6 ? 'text-gray-400' : 'text-gray-600 '
                 }`}
               >
-                {handleColumnChange(item.col5Options, header5Option)}
+                {handleColumnChange(item.col4Options, header4Option)}
               </td>
               <td
                 className={`border text-center text-sm border-gray-100 px-4 py-2 ${
                   index >= itemsPerPage - 6 ? 'text-gray-400' : 'text-green-500'
                 }`}
               >
-                {handleColumnChange(item.col6Options, header6Option)}
+                {handleColumnChange(item.col5Options, header5Option)}
+              </td>
+              <td
+                className={`border text-center text-sm border-gray-100 px-4 py-2 ${
+                  index >= itemsPerPage - 6 ? 'text-gray-400' : 'text-gray-600 '
+                }`}
+              >
+                {item.col6}
               </td>
               <td
                 className={`border text-center text-sm border-gray-100 px-4 py-2 ${
@@ -139,14 +149,6 @@ const DataTable2 = () => {
                 }`}
               >
                 {item.col7}
-              </td>
-
-              <td
-                className={`border text-center text-sm border-gray-100 px-4 py-2 ${
-                  index >= itemsPerPage - 6 ? 'text-gray-400' : 'text-gray-600 '
-                }`}
-              >
-                {item.col8}
               </td>
             </tr>
           ))}

@@ -29,7 +29,7 @@ function Page() {
                         type='radio'
                         name='dateOption'
                         defaultChecked
-                        className='radio mr-4'
+                        className='radio mr-2'
                       />
                       <span className='label-text text-sm text-gray-600 font-medium'>
                         오늘
@@ -41,7 +41,7 @@ function Page() {
                       <input
                         type='radio'
                         name='dateOption'
-                        className='radio mr-4'
+                        className='radio mr-2'
                       />
                       <span className='label-text'> 최근 7일</span>
                     </label>
@@ -51,7 +51,7 @@ function Page() {
                       <input
                         type='radio'
                         name='dateOption'
-                        className='radio mr-4'
+                        className='radio mr-2'
                       />
                       <span className='label-text'> 최근 1개월</span>
                     </label>
@@ -63,17 +63,17 @@ function Page() {
             <div className='flex h-[30px] items-center gap-6 mt-4'>
               <div className=' flex flex-1 justify-between items-center border-b-[2px] border-gray-400 '>
                 <h2 className='text-gray-600 text-sm font-bold '>쿠폰 유형</h2>
-                <select className='select select-bordered pb-0  border-0 text-sm text-gray-600'>
-                  <option disabled selected>
+                <select className='select select-bordered pb-0 border-0 text-sm text-gray-600'>
+                  <option value='' disabled>
                     전체
                   </option>
-                  <option>추천인 코드 등록</option>
-                  <option>미션 완료</option>
-                  <option>미션 완료</option>
+                  <option value='추천인 코드 등록'>추천인 코드 등록</option>
+                  <option value='미션 완료'>미션 완료</option>
+                  <option value='미션 완료'>미션 완료</option>
                 </select>
               </div>
               <div className='border-b-[2px] flex-1 items-center flex justify-between ml-6 border-gray-400 '>
-                <h2 className='text-gray-600 text-sm font-bold mr-8'>
+                <h2 className='text-gray-600 text-sm font-bold mr-4'>
                   쿠폰 유형
                 </h2>
                 <div className='form-control inline-block '>
@@ -150,7 +150,7 @@ function Page() {
 
           <Table />
         </div>
-        <div className='flex justify-center  py-6 items-center my-[2rem]  bg-white h-[52px] shadow-inner  border-t-[2px] border-gray-400'>
+        <div className='flex justify-center  py-6 items-center   bg-white h-[52px] shadow-inner  border-t-[2px] border-gray-400'>
           <button className='font-bold mx-4 text-center text-sm text-white bg-button hover:bg-gray-500 px-[5rem] py-2 rounded-[5px]'>
             엑셀파일 다운로드
           </button>

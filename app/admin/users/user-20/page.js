@@ -4,7 +4,7 @@ import Sidebar from '../../../../components/Sidebar';
 // import svg from '../../images/nike.svg';
 import Image from 'next/image';
 import DateComponent from '../../../../components/Date';
-import Table from '../../../../components/tableUser15';
+import Table from '../../../../components/tableUser20';
 
 import { Select } from 'antd';
 
@@ -16,9 +16,9 @@ function Page() {
           <h1 className='font-bold text-base mb-2 text-black'>요청일</h1>
 
           <div className='h-[170px] pt-6 pb-4 px-6 bg-white '>
-            <div className='flex'>
-              <div className='border-b-[2px] flex gap-[2rem] items-center border-gray-400 '>
-                <h2 className='text-gray-600 font-lg font-bold mr-[4rem] '>
+            <div className='flex justify-between items-center'>
+              <div className='border-b-[2px] flex  gap-[1rem] items-center border-gray-400 '>
+                <h2 className='text-gray-600 font-lg font-bold mr-[3rem] '>
                   등록 기간
                 </h2>
                 <DateComponent />
@@ -58,7 +58,44 @@ function Page() {
                   </div>
                 </div>
               </div>
-              <div className='mx-auto'></div>
+              <div className='border-b-[2px]  flex justify-between items-center border-gray-400'>
+                <h1 className='font-bold text-base  mr-8 text-gray-600'>
+                  노출 여부 *
+                </h1>
+                <div className='form-control inline-block '>
+                  <label className='label cursor-pointer'>
+                    <input
+                      type='radio'
+                      name='dateOption'
+                      defaultChecked
+                      className='radio mr-2'
+                    />
+                    <span className='label-text text-sm text-gray-600 font-medium'>
+                      오늘
+                    </span>
+                  </label>
+                </div>
+                <div className='form-control inline-block '>
+                  <label className='label cursor-pointer'>
+                    <input
+                      type='radio'
+                      name='dateOption'
+                      className='radio mr-2'
+                    />
+                    <span className='label-text'> 최근 7일</span>
+                  </label>
+                </div>
+                <div className='form-control inline-block '>
+                  <label className='label cursor-pointer'>
+                    <input
+                      type='radio'
+                      name='dateOption'
+                      className='radio mr-2'
+                    />
+                    <span className='label-text'> 최근 1개월</span>
+                  </label>
+                </div>
+              </div>
             </div>
             <div className='flex items-center gap-6 mt-4'>
               <div className=' flex flex-1 justify-between items-center border-b-[2px] border-gray-400 '>
@@ -89,30 +126,10 @@ function Page() {
               </div>
             </div>
           </div>
-          <div className='flex justify-between px-4 mt-[4rem] pb-2  border-b-[2px] border-gray-400'>
-            <h1 className='font-bold text-base  text-black'>
-              검색 254개 <span className='mx-1'>/</span>전체 1,357개
-            </h1>
-
-            <select className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:border-none hover:border-none'>
-              <option value='option1' className='text-sm'>
-                10개 보기
-              </option>
-              <option value='option2' className='text-sm'>
-                20개 보기{' '}
-              </option>
-              <option value='option3' className='text-sm'>
-                50개 보기
-              </option>
-              <option value='option4' className='text-sm'>
-                100개 보기
-              </option>
-            </select>
-          </div>
 
           <Table />
         </div>
-        <div className='flex justify-center  py-6 items-center my-[2rem]  bg-white h-[52px] shadow-inner  border-t-[2px] border-gray-400'>
+        <div className='flex justify-center  py-6 items-center   bg-white h-[52px] shadow-inner  border-t-[2px] border-gray-400'>
           <button className='font-bold mx-4 text-center text-sm text-white bg-button hover:bg-gray-500 px-[5rem] py-2 rounded-[5px]'>
             엑셀파일 다운로드
           </button>
