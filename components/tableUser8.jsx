@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { data } from '../data/tableDataUser8';
-import ForwArr from '../images/forwarArrow.svg';
-import PrevArr from '../images/double-arrow-p.svg';
+import ForwArr from '../data/images/forwarArrow.svg';
+import PrevArr from '../data/images/double-arrow-p.svg';
 import Image from 'next/image';
 
 const DataTable2 = () => {

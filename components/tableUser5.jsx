@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { data } from '../data/table-data';
-import ForwArr from '../images/forwarArrow.svg';
-import PrevArr from '../images/double-arrow-p.svg';
+import ForwArr from '../data/images/forwarArrow.svg';
+import PrevArr from '../data/images/double-arrow-p.svg';
 import Image from 'next/image';
 
 const DataTable2 = () => {
@@ -56,7 +56,9 @@ const DataTable2 = () => {
 
       <div className='mt-4 flex items-center justify-center border-t-2 bg-white h-[60px]'>
         <button
-          className={`mr-2 p-2 ${currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'} text-white  rounded-full`}
+          className={`mr-2 p-2 ${
+            currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'
+          } text-white  rounded-full`}
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -65,14 +67,20 @@ const DataTable2 = () => {
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
           <button
             key={page}
-            className={`mr-2 p-0 ${currentPage === page ? 'text-black' : 'text-gray-400'} mx-2 text-medium font-medium  rounded-full`}
+            className={`mr-2 p-0 ${
+              currentPage === page ? 'text-black' : 'text-gray-400'
+            } mx-2 text-medium font-medium  rounded-full`}
             onClick={() => handlePageChange(page)}
           >
             {page}
           </button>
         ))}
         <button
-          className={`ml-2 p-2 ${currentPage === totalPages ? ' cursor-not-allowed' : ' hover:bg-gray-300'} text-white rounded-full`}
+          className={`ml-2 p-2 ${
+            currentPage === totalPages
+              ? ' cursor-not-allowed'
+              : ' hover:bg-gray-300'
+          } text-white rounded-full`}
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
