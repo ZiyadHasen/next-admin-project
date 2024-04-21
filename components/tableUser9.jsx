@@ -27,9 +27,9 @@ const DataTable2 = () => {
   };
 
   return (
-    <div className='container mx-auto '>
+    <div className='container mx-auto  '>
       <table className='min-w-full border-collapse border text-gray-600 border-gray-300'>
-        <thead className='bg-zinc-200 px-2'>
+        <thead className='bg-[#EEEEEE] px-2'>
           <tr>
             <th className='border py-2'>No</th>
             <th className='border px-4 py-2'>계정</th>
@@ -41,11 +41,11 @@ const DataTable2 = () => {
             <th className='border px-4 py-2'>진행율</th>
           </tr>
         </thead>
-        <tbody className='border-b-2 border-gray-500'>
+        <tbody className=''>
           {currentData.map((item, index) => (
             <tr
               className={`bg-white text-center text-sm border border-gray-100 px-4 py-2 ${
-                index === 4 ? 'border-b-2 border-red-500' : ''
+                index === 4 ? 'border-b-2 border-[#EB5757]' : ''
               }`}
               key={item.id}
             >
@@ -80,7 +80,7 @@ const DataTable2 = () => {
         </tbody>
       </table>
 
-      <div className='mt-4 flex items-center justify-center border-t-2 bg-white h-[60px]'>
+      <div className='mt-4 flex items-center justify-center border-t-2 border-gray-500 bg-white h-[60px]'>
         <button
           className={`mr-2 p-2 ${
             currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'

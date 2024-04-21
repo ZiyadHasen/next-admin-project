@@ -39,7 +39,7 @@ const DataTable2 = () => {
 
             <th className='border  py-2'>
               <select
-                className='border bg-inherit px-4 py-2'
+                className='border bg-inherit px-4 py-2 outline-none border-0'
                 onChange={(e) => setHeader6Option(Number(e.target.value))}
               >
                 <option value={0}>기능</option>
@@ -49,7 +49,7 @@ const DataTable2 = () => {
             </th>
             <th className='border px-4 py-2'>
               <select
-                className=' border px-4 bg-inherit py-2 focus:border-none hover:border-none'
+                className='px-4 bg-inherit py-2 outline-none border-0'
                 onChange={(e) => setHeader7Option(Number(e.target.value))}
               >
                 <option value={0}> 처리 일시</option>
@@ -71,11 +71,11 @@ const DataTable2 = () => {
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col2}
               </td>
-              <td className='border text-center text-blue-400 text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-[#2F80ED] text-sm border-gray-100 px-4 py-2'>
                 {item.col3}
               </td>
 
-              <td className='border text-center text-green-600 text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-[#219653] text-sm border-gray-100 px-4 py-2'>
                 {item.col4}
               </td>
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { data } from '../data/table-data';
+import { data } from '../data/tableDataUser5';
 import ForwArr from '../data/images/forwarArrow.svg';
 import PrevArr from '../data/images/double-arrow-p.svg';
 import Image from 'next/image';
@@ -38,23 +38,23 @@ const DataTable2 = () => {
               key={item.id}
             >
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
-                {item.id}
-              </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col1}
               </td>
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
-                {item.col4}
+                {item.col2}
               </td>
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col3}
+              </td>
+              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+                {item.col4}
               </td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      <div className='mt-4 flex items-center justify-center border-t-2 bg-white h-[60px]'>
+      <div className='mt-4 flex items-center justify-center border-t-2 bg-backG h-[60px]'>
         <button
           className={`mr-2 p-2 ${
             currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'

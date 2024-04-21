@@ -19,8 +19,8 @@ function Page() {
                 운영 관리<span className='m-2 '>&gt;</span>관리자 관리
               </h1>
               {/* section one */}
-              <div className='h-[214px] px-6 py-2 bg-white '>
-                <h1 className='bg-zinc-200 my-4 text-gray-600 text-sm font-bold p-2'>
+              <div className='h-[214px] border-[1px] border-gray-500 px-6 py-2 bg-white '>
+                <h1 className='bg-[#EEEEEE] my-4 text-gray-600 text-sm font-bold p-2'>
                   기본 정보
                 </h1>
                 {/* first row  */}
@@ -33,7 +33,7 @@ function Page() {
                       <input
                         type='text'
                         placeholder='RENEVV 9.5'
-                        className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-700 h-[28px] w-[230px] mb-1 rounded-none'
+                        className='input focus:border-transparent px-2  focus:border-0 focus:outline-none text-gray-700 h-[28px] w-[230px] mb-1 rounded-none'
                       />
                     </div>
                   </div>
@@ -46,7 +46,7 @@ function Page() {
                       <input
                         type='text'
                         placeholder='94C96039A781'
-                        className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
+                        className='input focus:border-transparent px-2  focus:outline-none focus:border-0 text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
                       />
                     </div>
                   </div>
@@ -55,11 +55,7 @@ function Page() {
                       최초 등록 일시
                     </div>
                     <div className='ml-6'>
-                      <input
-                        type='text'
-                        placeholder='2022-12-21 22:30'
-                        className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
-                      />
+                      <Date />
                     </div>
                   </div>
                 </div>
@@ -74,7 +70,7 @@ function Page() {
                       <input
                         type='text'
                         placeholder='2024030200198'
-                        className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-700 h-[28px] w-[230px] mb-1 rounded-none'
+                        className='input focus:border-transparent px-2  focus:border-0 focus:outline-none text-gray-700 h-[28px] w-[230px] mb-1 rounded-none'
                       />
                     </div>
                   </div>
@@ -87,7 +83,7 @@ function Page() {
                       <input
                         type='text'
                         placeholder='name@domain.co.kr'
-                        className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
+                        className='input focus:border-transparent px-2  focus:border-0 focus:outline-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
                       />
                     </div>
                   </div>
@@ -96,11 +92,7 @@ function Page() {
                       주계정 등록 일시
                     </div>
                     <div className='ml-6'>
-                      <input
-                        type='text'
-                        placeholder='2022-12-21 22:30'
-                        className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
-                      />
+                      <Date />
                     </div>
                   </div>
                 </div>
@@ -117,7 +109,7 @@ function Page() {
                       <input
                         type='text'
                         placeholder='94C96039A781'
-                        className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
+                        className='input focus:border-transparent px-2  focus:border-0 focus:outline-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
                       />
                     </div>
                   </div>
@@ -126,11 +118,7 @@ function Page() {
                       부계정 등록 일시
                     </div>
                     <div className='ml-6'>
-                      <input
-                        type='text'
-                        placeholder='2022-12-21 22:30'
-                        className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
-                      />
+                      <Date />
                     </div>
                   </div>
                 </div>
@@ -141,8 +129,8 @@ function Page() {
           </section>
 
           {/* 2nd section */}
-          <div className='px-4 py-2 bg-white '>
-            <h1 className='bg-zinc-200 my-4 text-gray-600 text-sm font-bold p-2'>
+          <div className='px-4 py-2 bg-white border-[1px] border-gray-500 '>
+            <h1 className='bg-[#EEEEEE] my-4 text-gray-600 text-sm font-bold p-2'>
               기본 정보
             </h1>
             {/* first row  */}
@@ -162,7 +150,7 @@ function Page() {
                   <input
                     type='text'
                     placeholder='10000'
-                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-400 h-[28px] w-[230px] mb-1 rounded-none'
+                    className='input focus:border-transparent px-2  focus:border-0 focus:outline-none text-gray-400 h-[28px] w-[230px] mb-1 rounded-none'
                   />
                 </div>
               </div>
@@ -173,8 +161,8 @@ function Page() {
                 <div className='ml-6'>
                   <input
                     type='text'
-                    placeholder='2022-12-21 22:30'
-                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-400 h-[28px] w-[230px] mb-1 rounded-none'
+                    placeholder='2.1%'
+                    className='input focus:border-transparent px-2  focus:border-0 focus:outline-none text-gray-400 h-[28px] w-[230px] mb-1 rounded-none'
                   />
                 </div>
               </div>

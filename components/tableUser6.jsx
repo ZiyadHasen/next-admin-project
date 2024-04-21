@@ -35,7 +35,7 @@ const DataTable2 = () => {
 
             <th className='border px-4 py-2'>
               <select
-                className='border bg-inherit px-4 py-2'
+                className='border bg-inherit px-4 py-2 outline-none'
                 onChange={(e) => setHeader2Option(Number(e.target.value))}
               >
                 <option value={0}>Option 1</option>
@@ -52,7 +52,7 @@ const DataTable2 = () => {
             <th className='border px-4 py-2'>노출 여부</th>
             <th className='border px-4 py-2'>
               <select
-                className=' border px-4 bg-inherit py-2 focus:border-none hover:border-none'
+                className=' border outline-none px-4 bg-inherit py-2 focus:border-none hover:border-none'
                 onChange={(e) => setHeader7Option(Number(e.target.value))}
               >
                 <option value={0}>Option 1</option>
@@ -74,7 +74,7 @@ const DataTable2 = () => {
                 {item.col1}
               </td>
 
-              <td className='border text-center text-sm text-blue-400  border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm text-[#2F80ED]  border-gray-100 px-4 py-2'>
                 {handleColumnChange(item.col2Options, header2Option)}
               </td>
               <td className='border text-center text-sm  border-gray-100 px-4 py-2'>
@@ -92,9 +92,7 @@ const DataTable2 = () => {
 
               <td
                 className={`border text-center text-sm border-gray-100 px-4 py-2 ${
-                  index >= 5 && index < 10
-                    ? 'text-green-600'
-                    : 'text-yellow-600'
+                  index >= 5 && index < 10 ? 'text-[#219653]' : 'text-[#F2994A]'
                 }`}
               >
                 {handleColumnChange(item.col7Options, header7Option)}
@@ -108,7 +106,7 @@ const DataTable2 = () => {
         </tbody>
       </table>
 
-      <div className='mt-4 flex items-center justify-center border-t-2 bg-white h-[60px]'>
+      <div className='mt-4 flex items-center justify-center bg-backG h-[60px]'>
         <button
           className={`mr-2 p-2 ${
             currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { data } from '../data/tableDataUser1';
+import { data } from '../data/tableDataUser2';
 import ForwArr from '../data/images/forwarArrow.svg';
 import PrevArr from '../data/images/double-arrow-p.svg';
 import Image from 'next/image';
 
-const DataTable2 = () => {
+const DataTable = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [header3Option, setHeader3Option] = useState(0);
   const [header6Option, setHeader6Option] = useState(0);
@@ -31,38 +31,40 @@ const DataTable2 = () => {
       <table className='min-w-full border-collapse border text-gray-600 border-gray-300'>
         <thead>
           <tr className='bg-transparent'>
-            <th className='border py-2'>No</th>
-            <th className='border px-4 py-2'>계정</th>
-            <th className='border px-4 py-2'>
+            <th className='border text-sm font-bold py-2'>No</th>
+            <th className='border text-sm font-bold px-4 py-2'>계정</th>
+            <th className='border text-sm font-bold px-4 py-2'>
               <select
-                className='border bg-inherit px-4 py-2'
+                className='border bg-inherit px-4 py-2 text-sm font-bold outline-none'
                 onChange={(e) => setHeader3Option(Number(e.target.value))}
               >
-                <option value={0}>Option 1</option>
-                <option value={1}>Option 2</option>
-                <option value={2}>Option 3</option>
+                <option value={0}>관리자 명</option>
+                <option value={1}>관리자 명</option>
+                <option value={2}>관리자 명</option>
               </select>
             </th>
-            <th className='border px-4 py-2'>연락처</th>
-            <th className='border px-4 py-2'>접근기간</th>
-            <th className='border px-4 py-2'>
+            <th className='border px-4 py-2 text-sm font-bold'>연락처</th>
+            <th className='border px-4 py-2 text-sm font-bold'>접근기간</th>
+
+            <th className='border px-4 py-2 text-sm font-bold'>
               <select
-                className=' border px-4 bg-inherit py-2 focus:border-none hover:border-none'
-                onChange={(e) => setHeader6Option(Number(e.target.value))}
+                className=' border px-4 text-sm font-bold bg-inherit py-2 outline-none'
+                onChange={(e) => setHeader7Option(Number(e.target.value))}
               >
-                <option value={0}>Option 1</option>
-                <option value={1}>Option 2</option>
-                <option value={2}>Option 3</option>
+                <option value={0}>노출 여부</option>
+                <option value={1}>노출 여부</option>
+                <option value={2}>노출 여부</option>
               </select>
             </th>
-            <th className='border px-4 py-2'>노출 여부</th>
+            <th className='border px-4 py-2 text-sm font-bold'>노출 여부</th>
+
             <th className='border px-4 py-2'>등록일시</th>
           </tr>
         </thead>
         <tbody>
-          {currentData.map((item) => (
+          {currentData.map((item, index) => (
             <tr
-              className='bg-white text-center text-sm border border-gray-100 px-4 py-2'
+              className={`bg-${index >= itemsPerPage - 5 ? 'white' : 'white'}`}
               key={item.id}
             >
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
@@ -71,7 +73,7 @@ const DataTable2 = () => {
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col2}
               </td>
-              <td className='border text-center text-sm text-blue-400 border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm text-[#2F80ED] border-gray-100 px-4 py-2'>
                 {handleColumnChange(item.col3Options, header3Option)}
               </td>
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
@@ -80,12 +82,14 @@ const DataTable2 = () => {
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col5}
               </td>
+
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {handleColumnChange(item.col6Options, header6Option)}
               </td>
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col7}
               </td>
+
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col8}
               </td>
@@ -94,7 +98,7 @@ const DataTable2 = () => {
         </tbody>
       </table>
 
-      <div className='mt-4 flex items-center justify-center border-t-2 bg-white h-[60px]'>
+      <div className='py-4 flex items-center justify-center  border-t-[2px] border-[#616161] h-[60px]'>
         <button
           className={`mr-2 p-2 ${
             currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'
@@ -102,7 +106,7 @@ const DataTable2 = () => {
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          <Image src={PrevArr} alt='somthing'></Image>
+          <Image src={PrevArr} alt='arrow'></Image>
         </button>
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
           <button
@@ -131,4 +135,4 @@ const DataTable2 = () => {
   );
 };
 
-export default DataTable2;
+export default DataTable;

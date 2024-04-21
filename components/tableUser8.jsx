@@ -57,13 +57,13 @@ const DataTable2 = () => {
               <td className='border text-center text-sm  border-gray-100 px-4 py-2'>
                 {item.col3}
               </td>
-              <td className='border text-center text-sm text-blue-600 border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm text-[#2F80ED] border-gray-100 px-4 py-2'>
                 {item.col4}
               </td>
               <td className='border text-center text-sm border-gray-100 px-4 py-2'>
                 {item.col5}
               </td>
-              <td className='border text-center text-sm text-green-600 border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm text-[#219653] border-gray-100 px-4 py-2'>
                 {item.col6}
               </td>
 
@@ -75,7 +75,7 @@ const DataTable2 = () => {
         </tbody>
       </table>
 
-      <div className='mt-4 flex items-center justify-center border-t-2 bg-white h-[60px]'>
+      <div className='mt-4 flex items-center justify-center  bg-backG h-[60px]'>
         <button
           className={`mr-2 p-2 ${
             currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'

@@ -3,12 +3,20 @@ import React from 'react';
 import Sidebar from '../../../../components/Sidebar';
 // import svg from '../../images/nike.svg';
 import Image from 'next/image';
-import Date from '../../../../components/Date';
+import DateComponent from '../../../../components/Date';
 import Table from '../../../../components/tableUser6';
+import { useState } from 'react';
+import cheked from '../../../../data/images/cheked.svg';
+import unCheked from '../../../../data/images/uncheked.svg';
 
 import { Select } from 'antd';
 
 function Page() {
+  const [optionOne, setOptionOne] = useState(false);
+  const [optionTwo, setOptionTwo] = useState(false);
+  const [optionThree, setOptionThree] = useState(false);
+  const [optionFour, setOptionFour] = useState(false);
+
   return (
     <Sidebar>
       <main className='flex-1 text-white  bg-backG'>
@@ -18,56 +26,90 @@ function Page() {
           </h1>
 
           <div className='h-[124px] pt-4 pb-4 px-6 bg-white '>
-            <div className='flex items-center'>
-              <div className='border-b-[2px] flex-1 flex gap-[1rem] items-center border-gray-400 '>
-                <h2 className='text-gray-600 font-lg font-bold mr-[4rem] '>
+            <div className='flex justify-between'>
+              <div className='border-b-[2px] flex gap-4 items-center border-gray-400 '>
+                <h2 className='text-gray-600 font-lg font-bold mr-4 '>
                   등록 기간
                 </h2>
-                <Date />
-                <div>
-                  <div className='form-control inline-block mr-2'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='dateOption'
-                        defaultChecked
-                        className='radio mr-4'
-                      />
-                      <span className='label-text text-sm text-gray-600 font-medium'>
-                        오늘
-                      </span>
-                    </label>
+                <DateComponent />
+                <div className='flex items-center gap-4 ml-4'>
+                  <div
+                    className='flex justify-center items-center gap-2 cursor-pointer'
+                    onClick={() => {
+                      setOptionOne((prev) => !prev);
+                    }}
+                  >
+                    {optionOne ? (
+                      <Image src={cheked} alt='checked' />
+                    ) : (
+                      <Image src={unCheked} alt='un-checked' />
+                    )}
+
+                    <span className='label-text text-sm text-[#616161] font-medium'>
+                      오늘
+                    </span>
                   </div>
-                  <div className='form-control inline-block mr-2'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='dateOption'
-                        className='radio mr-4'
-                      />
-                      <span className='label-text'> 최근 7일</span>
-                    </label>
+
+                  <div
+                    className='flex justify-center items-center gap-2 cursor-pointer'
+                    onClick={() => {
+                      setOptionTwo((prev) => !prev);
+                    }}
+                  >
+                    {optionTwo ? (
+                      <Image src={cheked} alt='checked' />
+                    ) : (
+                      <Image src={unCheked} alt='un-checked' />
+                    )}
+
+                    <span className='label-text text-sm text-[#616161] font-medium'>
+                      오늘
+                    </span>
                   </div>
-                  <div className='form-control inline-block mr-2'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='dateOption'
-                        className='radio mr-4'
-                      />
-                      <span className='label-text'> 최근 1개월</span>
-                    </label>
+
+                  <div
+                    className='flex justify-center items-center gap-2 cursor-pointer'
+                    onClick={() => {
+                      setOptionThree((prev) => !prev);
+                    }}
+                  >
+                    {optionThree ? (
+                      <Image src={cheked} alt='checked' />
+                    ) : (
+                      <Image src={unCheked} alt='un-checked' />
+                    )}
+
+                    <span className='label-text text-sm text-[#616161] font-medium'>
+                      최근 7일
+                    </span>
+                  </div>
+                  <div
+                    className='flex justify-center items-center gap-2 cursor-pointer'
+                    onClick={() => {
+                      setOptionFour((prev) => !prev);
+                    }}
+                  >
+                    {optionFour ? (
+                      <Image src={cheked} alt='checked' />
+                    ) : (
+                      <Image src={unCheked} alt='un-checked' />
+                    )}
+
+                    <span className='label-text text-sm text-[#616161] font-medium'>
+                      최근 1개월
+                    </span>
                   </div>
                 </div>
               </div>
-              <div className='border-b-[2px] mt-2 pb-1 ml-6 border-gray-400 '>
+              <div className='border-b-[2px] ml-2 border-gray-400 '>
                 <input
                   type='text'
                   placeholder='계정(이메일), 이름, 연락처 검색'
-                  className='input focus:border-transparent border-gray-300 bg-gray-50 text-gray-600 h-[28px] w-[320px]  rounded-none'
+                  className='input focus:outline-none focus:border-0 bg-gray-50 text-[#616161] h-[35px] w-[380px]  rounded-none
+                  placeholder:text-sm placeholder:font-bold
+                  '
                 />
               </div>
-              {/* <div className='mx-auto'></div> */}
             </div>
             <div className='flex justify-center mt-4 '>
               <button className='text-white text-center text-sm font-bold px-8 py-1 rounded-[4px] bg-button mr-4'>
@@ -80,11 +122,12 @@ function Page() {
           </div>
           {/* 2nd section */}
           <section className='flex justify-between px-4 mt-[4rem] pb-2  border-b-[2px] border-gray-400'>
-            <h1 className='font-bold text-base  text-black'>
-              운영 관리<span className='m-2 '>&gt;</span>관리자 관리
+            <h1 className='font-bold text-base  text-[#9e9e9e]'>
+              검색 <span className=' text-black '>254</span>개 / 전체
+              <span className='text-black'> 1,357 </span> 개
             </h1>
 
-            <select className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:border-none hover:border-none'>
+            <select className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:border-none outline-none'>
               <option value='option1' className='text-sm'>
                 10개 보기
               </option>
