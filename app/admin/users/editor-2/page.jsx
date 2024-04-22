@@ -7,11 +7,11 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import { useRouter } from 'next/navigation';
 
-function Page() {
-  const Editor = dynamic(() => import('../../../../components/CKEditor '), {
-    ssr: false,
-  });
+const Editor = dynamic(() => import('../../../../components/CKEditor '), {
+  ssr: false,
+});
 
+function Page() {
   const router = useRouter();
   const goNext = () => {
     router.push('/admin');

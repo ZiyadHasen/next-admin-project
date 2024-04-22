@@ -14,10 +14,12 @@ import unChecked from '../../../../data/images/uncheked.svg';
 import checkedCircle from '../../../../data/images/checkedCircle.svg';
 import unCheckedCircle from '../../../../data/images/circle.svg';
 
+const Editor = dynamic(() => import('../../../../components/CKEditor '), {
+  ssr: false,
+});
+
 function Page() {
-  const Editor = dynamic(() => import('../../../../components/CKEditor '), {
-    ssr: false,
-  });
+ 
 
   const [mark, setMark] = useState(false);
   const [checkOne, setCheckOne] = useState(true);
