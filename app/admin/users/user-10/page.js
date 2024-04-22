@@ -117,7 +117,7 @@ function Page() {
               <div className='border-b-[2px] ml-6 border-gray-400 '>
                 <input
                   type='text'
-                  placeholder='시리얼 넘버'
+                  placeholder='시리얼넘버, 계정 검색'
                   className='input focus:border-0 focus:outline-none border-gray-300 bg-gray-50 text-gray-600 h-[35px] w-[25rem] mb-1 rounded-none
                   placeholder:text-[#9E9E9E] placeholder:font-bold
                   '
@@ -134,8 +134,9 @@ function Page() {
             </div>
           </div>
           <div className='flex justify-between px-4 mt-[4rem] pb-2  border-b-[2px] border-gray-400'>
-            <h1 className='font-bold text-base  text-black'>
-              운영 관리<span className='m-2 '>&gt;</span>관리자 관리
+            <h1 className=' text-sm  text-[#9E9E9E]'>
+              검색개<span className='m-2 text-black font-bold'>254</span>전체{' '}
+              <span className='m-2 text-black font-bold'>1,357</span>개
             </h1>
             <select className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white outline-none border-0'>
               <option value='option1' className='text-sm'>

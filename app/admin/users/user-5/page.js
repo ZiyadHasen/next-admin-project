@@ -143,7 +143,7 @@ function Page() {
               <span className='text-black'> 1,357 </span> 개
             </h1>
 
-            <select className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:border-none hover:border-none'>
+            <select className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:outline-none focus:border-0'>
               <option value='option1' className='text-sm'>
                 10개 보기
               </option>

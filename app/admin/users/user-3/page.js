@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Sidebar from '../../../../components/Sidebar';
 import Image from 'next/image';
 import Date from '../../../../components/Date';
+import Date2 from '../../../../components/Date2';
 
 import checked from '../../../../data/images/cheked.svg';
 import unChecked from '../../../../data/images/uncheked.svg';
@@ -51,8 +52,7 @@ function Page() {
                     등록일시
                   </div>
                   <div className='ml-6 text-black'>
-                    {/* <Date height={12} /> */}
-                    <input type='datetime-local' />
+                    <Date2 />
                   </div>
                 </div>
                 <div className='flex-1'></div>
