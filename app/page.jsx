@@ -45,7 +45,7 @@ function HomePage() {
 
   return (
     <div className='font-spoqa '>
-      <div className='border-b-[1px] filter drop-shadow-md shadow-black/25 border-[#eeeeee] shadow-xl flex p-6'>
+      <div className='border-b-[1px] filter drop-shadow-md shadow-black/15 border-[#eeeeee] shadow-xl flex p-6'>
         <Image src={logo} alt='logo' />
       </div>
       <div className='flex  justify-center   bg-white'>

@@ -67,30 +67,30 @@ const DataTable = () => {
               className={`bg-${index >= itemsPerPage - 5 ? 'white' : 'white'}`}
               key={item.id}
             >
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm border-gray-100 px-4 py-3'>
                 {item.col1}
               </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm border-gray-100 px-4 py-3'>
                 {item.col2}
               </td>
               <td className='border text-center text-sm text-[#2F80ED] border-gray-100 px-4 py-2'>
                 {handleColumnChange(item.col3Options, header3Option)}
               </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm border-gray-100 px-4 py-3'>
                 {item.col4}
               </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm border-gray-100 px-4 py-3'>
                 {item.col5}
               </td>
 
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm border-gray-100 px-4 py-3'>
                 {handleColumnChange(item.col6Options, header6Option)}
               </td>
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm border-gray-100 px-4 py-3'>
                 {item.col7}
               </td>
 
-              <td className='border text-center text-sm border-gray-100 px-4 py-2'>
+              <td className='border text-center text-sm border-gray-100 px-4 py-3'>
                 {item.col8}
               </td>
             </tr>
@@ -98,7 +98,7 @@ const DataTable = () => {
         </tbody>
       </table>
 
-      <div className='py-4 flex items-center justify-center  border-t-[2px] border-[#616161] h-[60px]'>
+      <div className='py-4   flex items-center justify-center  border-t-[2px] border-[#616161] h-[60px]'>
         <button
           className={`mr-2 p-2 ${
             currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'

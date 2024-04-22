@@ -4,4 +4,13 @@
 
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
+.ck-editor__editable_inline {
+  min-height: 600px;
+  max-height: 600px;
+  
+}
 
+.cke_contents {
+  border: solid 1px #696969;
+  background-color: blue;
+}
