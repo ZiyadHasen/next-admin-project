@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Sidebar from '../../components/Sidebar';
+import { useRouter } from 'next/navigation';
+
 import svg from '../../data/images/spin.svg';
 import Image from 'next/image';
 import Date from '../../components/Date';
@@ -10,7 +12,10 @@ import unCheked from '../../data/images/uncheked.svg';
 import circle from '../../data/images/circle.svg';
 import checkedCirle from '../../data/images/checkedCircle.svg';
 
+
+
 function Page() {
+  const route = useRouter()
   const [optionOne, setOptionOne] = useState(false);
   const [optionTwo, setOptionTwo] = useState(false);
   const [optionThree, setOptionThree] = useState(false);
@@ -197,7 +202,9 @@ function Page() {
 
           <Table />
         </div>
-        <div className='flex justify-center  py-6 items-center mt-[2rem]  bg-white h-[52px] shadow-inner  border-t-[2px] border-gray-400'>
+        <div className='flex justify-center  py-6 items-center mt-[2rem]  bg-white h-[52px] shadow-inner  border-t-[2px] border-gray-400'
+        onClick={() => route.push("/admin/users/user-2")}
+        >
           <button className='font-bold text-center text-sm text-white bg-button px-[5rem] py-2 rounded-[5px]'>
             관리자 등록
           </button>

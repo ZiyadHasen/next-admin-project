@@ -1,9 +1,13 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation'
 import logo from '../data/images/Logo.png';
 import Image from 'next/image';
 
 const Sidebar = ({ children }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  console.log("The current route is ", pathname)
   return (
     <>
       <div className='   border-b-2 flex justify-between p-4'>
@@ -23,99 +27,102 @@ const Sidebar = ({ children }) => {
         </div>
       </div>
       <div className='flex'>
-        <div className='text-black h-screen bg-white py-14 px-6 border w-[242px]'>
+        <div className='text-black h-screen bg-white py-14   w-[242px]'>
           <div className='mb-4'>
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 px-6'>
               <div className='w-5 h-5 rounded-full bg-[#9e9e9e] mr-2'></div>
-              <h1 className='font-semibold text-[#616161] text-base'>
+              <h1 className='font-semibold text-[#616161] text-base '>
                 운영 관리
               </h1>
             </div>
-            <ul className='ml-7 mt-2'>
-              <li className=' my-2 ml-2 font-normal text-[16px] '>
-                <Link href='/admin/users/user-1'>└ 관리자 관리</Link>
+            <ul className='mt-2'>
+              <li className={`my-2 pl-14
+              ${pathname == "/admin/users/user-2" ? "bg-[#eee] font-bold py-1" : "font-normal"}
+              `}>
+
+                <Link href='/admin/users/user-2'>└ 관리자 관리</Link>
               </li>
-              <li className='my-2 ml-2 font-normal text-[16px]'>
+              <li className='my-2 pl-14 font-normal text-[16px]'>
                 <Link href='/admin/users/user-2'>└ 시리얼 넘버 관리</Link>
               </li>
             </ul>
           </div>
           <div className='mb-4'>
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 px-6'>
               <div className='w-5 h-5 rounded-full bg-[#9e9e9e] mr-2'></div>
               <h1 className='font-semibold text-[#616161] text-base'>
                 회원 관리
               </h1>
             </div>
-            <ul className='ml-7'>
-              <li className='my-2 ml-2 font-normal text-[16px] '>
+            <ul className=''>
+              <li className='my-2 pl-14 font-normal text-[16px] '>
                 <Link href='/admin/user'>└ 회원 관리</Link>
               </li>
-              <li className=' my-2 ml-2 font-normal text-[16px]'>
+              <li className=' my-2 pl-14 font-normal text-[16px]'>
                 <Link href='/admin/dashboard'>└ 기기 관리</Link>
               </li>
             </ul>
           </div>
           <div className='mb-4'>
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 px-6'>
               <div className='w-5 h-5 rounded-full bg-[#9e9e9e] mr-2'></div>
               <h1 className='font-semibold text-[#616161] text-base'>
                 사용기록 관리
               </h1>
             </div>
-            <ul className='ml-7'>
-              <li className=' my-2 ml-2 font-normal text-[16px] '>
+            <ul className=''>
+              <li className=' my-2 pl-14 font-normal text-[16px] '>
                 <Link href='/admin/user'>└ 사용기록 관리</Link>
               </li>
-              <li className=' my-2 ml-2 font-normal text-[16px]'>
+              <li className=' my-2 pl-14 font-normal text-[16px]'>
                 <Link href='/admin/dashboard'>└ 미션 관리</Link>
               </li>
-              <li className='my-2 ml-2 font-normal text-[16px]'>
+              <li className='my-2 pl-14 font-normal text-[16px]'>
                 <Link href='/admin/dashboard'>└ 쿠폰 관리</Link>
               </li>
-              <li className='my-2 ml-2 font-normal text-[16px]'>
+              <li className='my-2 pl-14 font-normal text-[16px]'>
                 <Link href='/admin/dashboard'>└ 쿠폰 발급 관리</Link>
               </li>
             </ul>
           </div>
           <div className='mb-4'>
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 px-6'>
               <div className='w-5 h-5 rounded-full bg-[#9e9e9e] mr-2'></div>
               <h1 className='font-semibold text-[#616161] text-base'>
                 앱 관리
               </h1>
             </div>
-            <ul className='ml-7'>
-              <li className=' my-2 ml-2 font-normal text-[16px] '>
+            <ul className=''>
+              <li className=' my-2 pl-14 font-normal text-[16px] '>
                 <Link href='/admin/user'>└ 가이드 관리</Link>
               </li>
-              <li className=' my-2 ml-2 font-normal text-[16px] '>
+              <li className=' my-2 pl-14 font-normal text-[16px] '>
                 <Link href='/admin/user'>└ FAQ 관리</Link>
               </li>
-              <li className=' my-2 ml-2 font-normal text-[16px] '>
+              <li className=' my-2 pl-14 font-normal text-[16px] '>
                 <Link href='/admin/user'>└ 쇼핑 관리</Link>
               </li>
-              <li className='my-2 ml-2 font-normal text-[16px] '>
+              <li className='my-2 pl-14 font-normal text-[16px] '>
                 <Link href='/admin/user'>└ 약관 관리</Link>
               </li>
 
-              <li className='my-2 ml-2 font-normal text-[16px]'>
+              <li className='my-2 pl-14 font-normal text-[16px]'>
                 <Link href='/admin/dashboard'>└ 팝업 관리</Link>
               </li>
             </ul>
           </div>
           <div className='mb-4'>
-            <div className='flex items-center gap-1'>
+            <div className='flex items-center gap-1 px-6'>
               <div className='w-5 h-5 rounded-full bg-[#9e9e9e] mr-2'></div>
               <h1 className='font-semibold text-[#616161] text-base'>
                 통계 관리
               </h1>
             </div>
-            <ul className='ml-7'>
-              <li className=' my-2 ml-2 font-normal text-[16px] '>
+            <ul className=''>
+              <li className=' my-2 pl-14 font-normal text-[16px] '>
                 <Link href='/admin/user'>└ 회원/기기 통계</Link>
               </li>
-              <li className=' my-2 ml-2 font-normal text-[16px]'>
+              <li className=' my-2 pl-14 font-normal text-[16px]'>
                 <Link href='/admin/dashboard'>└ 접속/사용 통계</Link>
               </li>
             </ul>
