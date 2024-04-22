@@ -82,21 +82,23 @@ const DataTable2 = () => {
               </td>
               <td
                 className={`border text-center text-sm border-gray-100 px-4 py-2 ${
-                  index >= itemsPerPage - 6 ? 'text-blue-300' : 'text-blue-500 '
+                  index >= itemsPerPage - 6 ? 'text-blue-300' : 'text-[#2F80ED]'
                 }`}
               >
                 {item.col3}
               </td>
               <td
                 className={`border text-center text-sm border-gray-100 px-4 py-2 ${
-                  index >= itemsPerPage - 6 ? 'text-gray-400' : 'text-green-500'
+                  index >= itemsPerPage - 6 ? 'text-gray-400' : 'text-gray-600'
                 }`}
               >
                 {item.col4}
               </td>
               <td
                 className={`border text-center text-sm border-gray-100 px-4 py-2 ${
-                  index >= itemsPerPage - 6 ? 'text-gray-400' : 'text-gray-600 '
+                  index >= itemsPerPage - 6
+                    ? 'text-gray-400'
+                    : 'text-[#219653] '
                 }`}
               >
                 {item.col5}
@@ -128,7 +130,7 @@ const DataTable2 = () => {
         </tbody>
       </table>
 
-      <div className=' flex items-center justify-center border-t-2 bg-backG mb-6 h-[60px]'>
+      <div className=' flex items-center justify-center border-t-[2px] border-[#616161] bg-backG mb-6 h-[60px]'>
         <button
           className={`mr-2 p-2 ${
             currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'

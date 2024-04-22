@@ -44,7 +44,7 @@ function HomePage() {
   };
 
   return (
-    <div className='font-spoqa'>
+    <div className='font-spoqa '>
       <div className='border-b-[1px] filter drop-shadow-md shadow-black/25 border-[#eeeeee] shadow-xl flex p-6'>
         <Image src={logo} alt='logo' />
       </div>

@@ -17,6 +17,7 @@ function Date2() {
         showTime
         onOpenChange={handleOpenChange}
         visible={dateVisible}
+        placeholder='2022-12-23 22:30'
       />
     </Space>
   );

@@ -4,7 +4,7 @@ import Sidebar from '../../components/Sidebar';
 import svg from '../../data/images/spin.svg';
 import Image from 'next/image';
 import Date from '../../components/Date';
-import Table from '../../components/datatable';
+import Table from '../../components/tableUser1';
 import cheked from '../../data/images/cheked.svg';
 import unCheked from '../../data/images/uncheked.svg';
 import circle from '../../data/images/circle.svg';
@@ -103,7 +103,7 @@ function Page() {
               </div>
             </div>
             <div className='flex items-center gap-6 mt-4'>
-              <div className=' flex items-center border-b-[2px] border-gray-400 '>
+              <div className=' flex items-center border-b-[2px] h-[30px] border-gray-400 '>
                 <div className='text-[#616161] font-lg font-bold mr-[4rem]'>
                   잠금 여부
                 </div>
@@ -156,13 +156,13 @@ function Page() {
                 <input
                   type='text'
                   placeholder='계정(이메일), 이름, 연락처 검색'
-                  className='input focus:border-transparent focus:outline-none border-gray-300 bg-gray-50 text-[#616161] h-[35px] w-[30rem] mb-1 rounded-none
+                  className='input focus:border-transparent focus:outline-none border-gray-300 bg-gray-50 text-[#616161] h-[30px] w-[30rem] mb-1 rounded-none
                   placeholder:text-sm placeholder:font-bold
                   '
                 />
               </div>
             </div>
-            <div className='flex items-center justify-center mt-2 mb-4 gap-4 space-x-4'>
+            <div className='flex items-center justify-center mt-4 mb-4 gap-4 space-x-4'>
               <button className='text-white text-center text-lg px-6 py-1 rounded-[4px] bg-button'>
                 초기화
               </button>
@@ -176,17 +176,20 @@ function Page() {
               검색 <span className=' text-black '>254</span>개 / 전체
               <span className='text-black'> 1,357 </span> 개
             </h1>
-            <select className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:border-none hover:border-none'>
-              <option value='option1' className='text-sm'>
+            <select className='text-sm text-[#616161] mx-4 pl-8 rounded-sm border-0 bg-white outline-none '>
+              <option value='option1' className='text-sm '>
                 10개 보기
               </option>
-              <option value='option2' className='text-sm'>
+              <option value='option2' className=' text-sm '>
                 20개 보기{' '}
               </option>
-              <option value='option3' className='text-sm'>
+              <option value='option3' className='   text-sm'>
                 50개 보기
               </option>
-              <option value='option4' className='text-sm'>
+              <option value='option4' className='text-sm '>
+                60개 보기
+              </option>
+              <option value='option4' className='text-sm '>
                 100개 보기
               </option>
             </select>
