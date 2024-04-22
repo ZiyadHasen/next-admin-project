@@ -255,13 +255,15 @@ function Page() {
                     (320x470)
                   </h2>
                 </div>
-                <div class='w-[150px] h-[100px] bg-[#9E9E9E] relative flex items-center justify-center'>
+                <div className='w-[150px] h-[100px] bg-[#9E9E9E] relative flex items-center justify-center'>
                   <input
                     type='file'
-                    class='absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer'
+                    className='absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer'
                     accept='image'
                   />
-                  <span class='text-white bg-[#333333] text-sm px-1'>+</span>
+                  <span className='text-white bg-[#333333] text-sm px-1'>
+                    +
+                  </span>
                 </div>
               </div>
 
