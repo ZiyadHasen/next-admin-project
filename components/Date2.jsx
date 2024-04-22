@@ -13,7 +13,7 @@ function Date2() {
     <Space className='date-range' size='small'>
       <DatePicker
         locale={locale}
-        className='h-[30px] py-0 text-gray-500 mb-2 m-0 border-none'
+        className='h-[28px] py-0 text-gray-500 mb-[2px] m-0 border-none'
         showTime
         onOpenChange={handleOpenChange}
         visible={dateVisible}
