@@ -6,8 +6,6 @@ import Sidebar from '../../../../components/Sidebar';
 import Image from 'next/image';
 import Date from '../../../../components/Date';
 import Date2 from '../../../../components/Date2';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import checked from '../../../../data/images/cheked.svg';
 import unChecked from '../../../../data/images/uncheked.svg';
@@ -19,8 +17,6 @@ const Editor = dynamic(() => import('../../../../components/CKEditor '), {
 });
 
 function Page() {
- 
-
   const [mark, setMark] = useState(false);
   const [checkOne, setCheckOne] = useState(true);
   const [checkTwo, setCheckTwo] = useState(false);

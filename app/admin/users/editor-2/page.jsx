@@ -2,8 +2,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Sidebar from '../../../../components/Sidebar';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import { useRouter } from 'next/navigation';
 
