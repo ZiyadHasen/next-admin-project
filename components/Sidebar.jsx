@@ -40,7 +40,9 @@ const Sidebar = ({ children }) => {
                 <li
                   className={`my-2 pl-14
               ${
-                pathname == "/admin/users/administrator-management" || pathname == "/admin/users/administrator-management-2" || pathname == "/admin/users/administrator-management-3"
+                pathname == "/admin/users/administrator-management" ||
+                pathname == "/admin/users/administrator-management-2" ||
+                pathname == "/admin/users/administrator-management-3"
                   ? "bg-[#eee] font-bold py-1"
                   : "font-normal"
               }
@@ -91,7 +93,8 @@ const Sidebar = ({ children }) => {
                 <li
                   className={`my-2 pl-14
               ${
-                pathname == "/admin/users/device-management" || pathname == "/admin/users/device-management-2"
+                pathname == "/admin/users/device-management" ||
+                pathname == "/admin/users/device-management-2"
                   ? "bg-[#eee] font-bold py-1"
                   : "font-normal"
               }
@@ -140,7 +143,8 @@ ${
                 <li
                   className={`my-2 pl-14
 ${
-  pathname == "/admin/users/coupon-management" || pathname == "/admin/users/coupon-management-2"
+  pathname == "/admin/users/coupon-management" ||
+  pathname == "/admin/users/coupon-management-2"
     ? "bg-[#eee] font-bold py-1"
     : "font-normal"
 }
@@ -162,12 +166,6 @@ ${
                   └ 쿠폰 발급 관리
                 </li>
               </Link>
-
-             
-             
-
-
-
             </ul>
           </div>
           <div className="mb-4">
@@ -178,12 +176,12 @@ ${
               </h1>
             </div>
             <ul className="">
-
-            <Link href="/admin/users/guide-management">
+              <Link href="/admin/users/guide-management">
                 <li
                   className={`my-2 pl-14
 ${
-  pathname == "/admin/users/guide-management" || pathname == "/admin/users/guide-management-2"
+  pathname == "/admin/users/guide-management" ||
+  pathname == "/admin/users/guide-management-2"
     ? "bg-[#eee] font-bold py-1"
     : "font-normal"
 }
@@ -192,11 +190,12 @@ ${
                   └ 가이드 관리
                 </li>
               </Link>
-            <Link href="/admin/users/faq-management">
+              <Link href="/admin/users/faq-management">
                 <li
                   className={`my-2 pl-14
 ${
-  pathname == "/admin/users/faq-management" || pathname == "/admin/users/faq-management-2"
+  pathname == "/admin/users/faq-management" ||
+  pathname == "/admin/users/faq-management-2"
     ? "bg-[#eee] font-bold py-1"
     : "font-normal"
 }
@@ -205,11 +204,12 @@ ${
                   └ FAQ 관리
                 </li>
               </Link>
-            <Link href="/admin/users/shopping-management">
+              <Link href="/admin/users/shopping-management">
                 <li
                   className={`my-2 pl-14
 ${
-  pathname == "/admin/users/shopping-management" || pathname == "/admin/users/shopping-management-2" 
+  pathname == "/admin/users/shopping-management" ||
+  pathname == "/admin/users/shopping-management-2"
     ? "bg-[#eee] font-bold py-1"
     : "font-normal"
 }
@@ -218,46 +218,33 @@ ${
                   └ 쇼핑 관리
                 </li>
               </Link>
-            <Link href="/admin/users/terms-and-conditions-management">
+              <Link href="/admin/users/terms-and-conditions-management">
                 <li
                   className={`my-2 pl-14
 ${
-  pathname == "/admin/users/terms-and-conditions-management" 
+  pathname == "/admin/users/terms-and-conditions-management"
     ? "bg-[#eee] font-bold py-1"
     : "font-normal"
 }
 `}
                 >
-                 └ 약관 관리
+                  └ 약관 관리
                 </li>
               </Link>
-            <Link href="/admin/users/pop-up-management">
+              <Link href="/admin/users/pop-up-management">
                 <li
                   className={`my-2 pl-14
 ${
-  pathname == "/admin/users/pop-up-management"  || pathname == "/admin/users/pop-up-management-2" 
+  pathname == "/admin/users/pop-up-management" ||
+  pathname == "/admin/users/pop-up-management-2"
     ? "bg-[#eee] font-bold py-1"
     : "font-normal"
 }
 `}
                 >
-                 └ 팝업 관리
+                  └ 팝업 관리
                 </li>
               </Link>
-
-
-
-
-              
-              
-
-
-
-
-              
-             
-             
-             
             </ul>
           </div>
           <div className="mb-4">
