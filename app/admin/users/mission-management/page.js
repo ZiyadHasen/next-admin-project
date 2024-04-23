@@ -102,7 +102,7 @@ function Page() {
                 <input
                   type='text'
                   placeholder='미션명 검색'
-                  className='input border-b-[2px] border-gray-300  text-gray-600 text-sm h-[28px]  w-full mb-[1px] rounded-none'
+                  className='input border-b-[2px] border-gray-300 focus:outline-none  text-gray-600 text-sm h-[28px]  w-full mb-[1px] rounded-none'
                 />
               </div>
             </div>

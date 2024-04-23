@@ -4,8 +4,18 @@ import Sidebar from '../../../../components/Sidebar';
 import Image from 'next/image';
 import DateComponent from '../../../../components/Date'; // Changed the import name to avoid conflicts
 import Table from '../../../../components/tableUser13';
+import { useState } from 'react';
+import cheked from '../../../../data/images/cheked.svg';
+import unCheked from '../../../../data/images/uncheked.svg';
+import checkedCircle from '../../../../data/images/checkedCircle.svg';
+import unCheckedCircle from '../../../../data/images/circle.svg';
 
 function Page() {
+  // second
+  const [checkTwo3, setCheckTwo3] = useState(true);
+  const [checkTwo4, setCheckTwo4] = useState(false);
+  const [checkTwo5, setCheckTwo5] = useState(false);
+
   return (
     <Sidebar>
       <main className='flex-1 text-white  bg-backG'>
@@ -14,64 +24,92 @@ function Page() {
             운영 관리<span className='m-2 '>&gt;</span>관리자 관리
           </h1>
 
-          <div className='h-[134px] pt-2 pb-4 px-6 bg-white '>
-            <div className='flex items-center gap-6 mt-2'>
+          <div className='h-[134px] pt-2 pb-4 px-6 mb-10 bg-white '>
+            <div className='flex items-center gap-6 mt-6'>
               <div className=' flex flex-1 justify-between items-center border-b-[2px] border-gray-400 '>
                 <h2 className='text-gray-600 text-sm font-bold mr-[2rem]'>
-                  쿠폰 유형
+                  모델 유형
                 </h2>
-                <select className='select select-bordered pb-0  border-0 text-sm text-gray-600'>
-                  <option disabled selected>
+                <select className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white outline-none border-0'>
+                  <option value='option1' className='text-sm'>
                     전체
                   </option>
-                  <option>추천인 코드 등록</option>
-                  <option>미션 완료</option>
-                  <option>미션 완료</option>
+                  <option value='option2' className='text-sm'>
+                    RENEVV 11
+                  </option>
+                  <option value='option3' className='text-sm'>
+                    RENEVV 12
+                  </option>
+                  <option value='option4' className='text-sm'>
+                    RENEVV 13
+                  </option>
                 </select>
               </div>
-              <div className='border-b-[2px] flex justify-between items-center flex-1 ml-6 border-gray-400 '>
+              <div className='border-b-[2px] flex gap-12 items-center flex-1 ml-6 border-gray-400 '>
                 <h2 className='text-gray-600 font-bold text-sm'>활성 여부</h2>
-                <div className='flex'>
-                  <div className='form-control mr-2'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='lockOption'
-                        defaultChecked
-                        className='radio mr-4 text-sm'
-                      />
-                      <span className='label-text text-sm text-gray-600 font-medium'>
-                        오늘
-                      </span>
-                    </label>
+                <div className='flex gap-5'>
+                  <div
+                    className='flex gap-1 justify-center items-center cursor-pointer'
+                    onClick={() => {
+                      setCheckTwo3(true);
+                      setCheckTwo4(false);
+                      setCheckTwo5(false);
+                    }}
+                  >
+                    {checkTwo3 ? (
+                      <Image src={checkedCircle} alt='checked' />
+                    ) : (
+                      <Image src={unCheckedCircle} alt='un-checked' />
+                    )}
+
+                    <span className='tetx-[14px] font-medium text-[#9e9e9e]'>
+                      전체
+                    </span>
                   </div>
-                  <div className='form-control  mr-1'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='lockOption'
-                        className='radio text-sm mr-4'
-                      />
-                      <span className='label-text'> 최근 7일</span>
-                    </label>
+                  <div
+                    className='flex gap-1 justify-center items-center cursor-pointer'
+                    onClick={() => {
+                      setCheckTwo3(false);
+                      setCheckTwo4(true);
+                      setCheckTwo5(false);
+                    }}
+                  >
+                    {checkTwo4 ? (
+                      <Image src={checkedCircle} alt='checked' />
+                    ) : (
+                      <Image src={unCheckedCircle} alt='un-checked' />
+                    )}
+
+                    <span className='tetx-[14px] font-medium text-[#9e9e9e]'>
+                      활성
+                    </span>
                   </div>
-                  <div className='form-control  mr-1'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='lockOption'
-                        className='radio text-sm mr-4'
-                      />
-                      <span className='label-text'> 최근 1개월</span>
-                    </label>
+                  <div
+                    className='flex gap-1 justify-center items-center cursor-pointer'
+                    onClick={() => {
+                      setCheckTwo3(false);
+                      setCheckTwo4(false);
+                      setCheckTwo5(true);
+                    }}
+                  >
+                    {checkTwo5 ? (
+                      <Image src={checkedCircle} alt='checked' />
+                    ) : (
+                      <Image src={unCheckedCircle} alt='un-checked' />
+                    )}
+
+                    <span className='tetx-[14px] font-medium text-[#9e9e9e]'>
+                      비활성
+                    </span>
                   </div>
                 </div>
               </div>
-              <div className='border-b-[2px] flex-1 ml-6 border-gray-400 '>
+
+              <div className=' flex-1 ml-6 border-b-2 border-gray-400 '>
                 <input
                   type='text'
-                  placeholder='계정(이메일), 이름, 연락처 검색'
-                  className='input focus:border-transparent border-gray-300 bg-gray-50 text-gray-600 text-sm h-[35px] w-full mb-1 rounded-none'
+                  placeholder='미션명 검색'
+                  className='input border-b-[2px] border-gray-300  text-gray-600 text-sm h-[28px]  w-full mb-[1px] rounded-none'
                 />
               </div>
             </div>

@@ -37,7 +37,7 @@ const DataTable2 = () => {
         </h1>
 
         <select
-          className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:border-none hover:border-none'
+          className='text-sm text-black mx-4 pl-8 rounded-sm h-[28px] bg-white focus:outline-none px-2 hover:border-none'
           onChange={(e) => handleItemsPerPageChange(Number(e.target.value))}
         >
           <option value={10} className='text-sm' selected={itemsPerPage === 10}>
@@ -60,7 +60,7 @@ const DataTable2 = () => {
             <th className='border py-2'>No</th>
             <th className='border  py-2'>
               <select
-                className='border bg-inherit px-4 py-2'
+                className='border focus:outline-none bg-inherit px-4 py-2'
                 onChange={(e) => setHeader2Option(Number(e.target.value))}
               >
                 <option value={0}>모델명</option>
@@ -71,7 +71,7 @@ const DataTable2 = () => {
             <th className='border py-2'>제목</th>
             <th className='border px-0 py-2'>
               <select
-                className=' border px-0 bg-inherit py-2 focus:border-none hover:border-none'
+                className=' border  focus:outline-none px-4 bg-inherit py-2 focus:border-none hover:border-none'
                 onChange={(e) => setHeader4Option(Number(e.target.value))}
               >
                 <option value={0}>노출 순서</option>
@@ -81,7 +81,7 @@ const DataTable2 = () => {
             </th>
             <th className='border px-4 py-2'>
               <select
-                className=' border px-4 bg-inherit py-2 focus:border-none hover:border-none'
+                className=' border focus:outline-none px-4 bg-inherit py-2 focus:border-none hover:border-none'
                 onChange={(e) => setHeader5Option(Number(e.target.value))}
               >
                 <option value={0}>노출</option>
