@@ -1,61 +1,132 @@
 'use client';
 import React from 'react';
+import { useState } from 'react';
 import Sidebar from '../../../../components/Sidebar';
 // import svg from '../../images/nike.svg';
 import Image from 'next/image';
+
+
+import cheked from '../../../../data/images/cheked.svg';
+import unChecked from '../../../../data/images/uncheked.svg';
+
+import checkedCircle from '../../../../data/images/checkedCircle.svg';
+import unCheckedCircle from '../../../../data/images/circle.svg';
+
+
 import DateComponent from '../../../../components/Date';
 import Table from '../../../../components/tableUser16';
 
-import { Select } from 'antd';
+
 
 function Page() {
+  const [checkOne, setCheckOne] = useState(true);
+  const [checkTwo, setCheckTwo] = useState(false);
+  const [checkThree, setCheckThree] = useState(false);
+  const [checkFour, setCheckFour] = useState(false);
+
+  const [checkCircleOne, setChecCirclekOne] = useState(true);
+  const [checkCircleTwo, setCheckCircleTwo] = useState(false);
+  const [checkCircleThree, setCheckCircleThree] = useState(false);
+
+
+
   return (
     <Sidebar>
       <main className='flex-1 text-white  bg-backG'>
         <div className='mx-4 mt-8'>
-          <h1 className='font-bold text-base mb-2 text-black'>요청일</h1>
+          <h1 className='font-bold text-base mb-2 text-black'>앱 관리 &gt; 가이드 관리</h1>
 
-          <div className='h-[170px] pt-4 pb-4 px-6 bg-white '>
+          <div className='h-[170px] pt-4 pb-[170px] px-6 bg-white '>
             <div className='flex'>
               <div className='border-b-[2px] flex gap-[2rem] items-center border-gray-400 '>
                 <h2 className='text-gray-600 font-lg font-bold mr-[4rem] '>
-                  등록 기간
+                등록일
                 </h2>
                 <DateComponent />
                 <div>
-                  <div className='form-control inline-block mr-2'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='dateOption'
-                        defaultChecked
-                        className='radio mr-2'
-                      />
-                      <span className='label-text text-sm text-gray-600 font-medium'>
-                        오늘
+
+
+                <div className='flex justify-center items-center gap-4'>
+                    <div
+                      className='flex gap-1 justify-center items-center cursor-pointer'
+                      onClick={() => {
+                        setCheckOne(true);
+                        setCheckTwo(false);
+                        setCheckThree(false);
+                        setCheckFour(false);
+                        
+                      }}
+                    >
+                      {checkOne ? (
+                        <Image src={cheked} alt='checked' />
+                      ) : (
+                        <Image src={unChecked} alt='un-checked' />
+                      )}
+
+                      <span className='text-[14px] font-medium text-[#9e9e9e]'>
+                      전체
                       </span>
-                    </label>
+                    </div>
+                    <div
+                      className='flex gap-1 justify-center items-center cursor-pointer'
+                      onClick={() => {
+                        setCheckOne(false);
+                        setCheckTwo(true);
+                        setCheckThree(false);
+                        setCheckFour(false);
+                      }}
+                    >
+                      {checkTwo ? (
+                        <Image src={cheked} alt='checked' />
+                      ) : (
+                        <Image src={unChecked} alt='un-checked' />
+                      )}
+
+                      <span className='text-[14px] font-medium text-[#9e9e9e]'>
+                      오늘
+                      </span>
+                    </div>
+                    <div
+                      className='flex gap-1 justify-center items-center cursor-pointer'
+                      onClick={() => {
+                        setCheckOne(false);
+                        setCheckTwo(false);
+                        setCheckThree(true);
+                        setCheckFour(false);
+                      }}
+                    >
+                      {checkThree ? (
+                        <Image src={cheked} alt='checked' />
+                      ) : (
+                        <Image src={unChecked} alt='un-checked' />
+                      )}
+
+                      <span className='text-[14px] font-medium text-[#9e9e9e]'>
+                      최근 7일
+                      </span>
+                    </div>
+                    <div
+                      className='flex gap-1 justify-center items-center cursor-pointer'
+                      onClick={() => {
+                        setCheckOne(false);
+                        setCheckTwo(false);
+                        setCheckThree(false);
+                        setCheckFour(true);
+                      }}
+                    >
+                      {checkFour ? (
+                        <Image src={cheked} alt='checked' />
+                      ) : (
+                        <Image src={unChecked} alt='un-checked' />
+                      )}
+
+                      <span className='text-[14px] font-medium text-[#9e9e9e]'>
+                      최근 1개월
+                      </span>
+                    </div>
                   </div>
-                  <div className='form-control inline-block mr-2'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='dateOption'
-                        className='radio mr-2'
-                      />
-                      <span className='label-text'> 최근 7일</span>
-                    </label>
-                  </div>
-                  <div className='form-control inline-block mr-2'>
-                    <label className='label cursor-pointer'>
-                      <input
-                        type='radio'
-                        name='dateOption'
-                        className='radio mr-2'
-                      />
-                      <span className='label-text'> 최근 1개월</span>
-                    </label>
-                  </div>
+                
+                
                 </div>
               </div>
               <div className='mx-auto'></div>
@@ -72,53 +143,84 @@ function Page() {
                   <option value='미션 완료'>미션 완료</option>
                 </select>
               </div>
-              <div className='border-b-[2px] flex-1 items-center flex justify-between ml-6 border-gray-400 '>
+              <div className='border-b-[2px] flex-1 items-center flex justify-between ml-6 border-gray-400 mt-5'>
                 <h2 className='text-gray-600 text-sm font-bold mr-4'>
                   쿠폰 유형
                 </h2>
-                <div className='form-control inline-block '>
-                  <label className='label cursor-pointer'>
-                    <input
-                      type='radio'
-                      name='dateOption'
-                      defaultChecked
-                      className='radio mr-2'
-                    />
-                    <span className='label-text text-sm text-gray-600 font-medium'>
-                      오늘
-                    </span>
-                  </label>
-                </div>
-                <div className='form-control inline-block '>
-                  <label className='label cursor-pointer'>
-                    <input
-                      type='radio'
-                      name='dateOption'
-                      className='radio mr-2'
-                    />
-                    <span className='label-text'> 최근 7일</span>
-                  </label>
-                </div>
-                <div className='form-control inline-block mr-2'>
-                  <label className='label cursor-pointer'>
-                    <input
-                      type='radio'
-                      name='dateOption'
-                      className='radio mr-2'
-                    />
-                    <span className='label-text'> 최근 1개월</span>
-                  </label>
-                </div>
+               
+                
+                <div className='flex justify-center items-center gap-4 pb-2'>
+                    <div
+                      className='flex gap-1 justify-center items-center cursor-pointer'
+                      onClick={() => {
+                        setChecCirclekOne(true);
+                        setCheckCircleTwo(false);
+                        setCheckCircleThree(false);
+                        
+                      }}
+                    >
+                      {checkCircleOne ? (
+                        <Image src={checkedCircle} alt='checked' />
+                      ) : (
+                        <Image src={unCheckedCircle} alt='un-checked' />
+                      )}
+
+                      <span className='text-[14px] font-medium text-[#9e9e9e]'>
+                      전체
+                      </span>
+                    </div>
+                    <div
+                      className='flex gap-1 justify-center items-center cursor-pointer'
+                      onClick={() => {
+                        setChecCirclekOne(false);
+                        setCheckCircleTwo(true);
+                        setCheckCircleThree(false);
+                      }}
+                    >
+                      {checkCircleTwo ? (
+                        <Image src={checkedCircle} alt='checked' />
+                      ) : (
+                        <Image src={unCheckedCircle} alt='un-checked' />
+                      )}
+
+                      <span className='text-[14px] font-medium text-[#9e9e9e]'>
+                      노출
+                      </span>
+                    </div>
+                    <div
+                      className='flex gap-1 justify-center items-center cursor-pointer'
+                      onClick={() => {
+                        setChecCirclekOne(false);
+                        setCheckCircleTwo(false);
+                        setCheckCircleThree(true);
+                      }}
+                    >
+                      {checkCircleThree ? (
+                        <Image src={checkedCircle} alt='checked' />
+                      ) : (
+                        <Image src={unCheckedCircle} alt='un-checked' />
+                      )}
+
+                      <span className='text-[14px] font-medium text-[#9e9e9e]'>
+                      비노출
+                      </span>
+                    </div>
+                   
+                   
+                  </div>
               </div>
+              <div className='pt-[10.5px]'>
+
               <div className='border-b-[2px] ml-6 border-gray-400 '>
                 <input
                   type='text'
                   placeholder='쿠폰명 검색'
                   className='input focus:border-transparent border-gray-300 bg-gray-50 text-gray-600 h-[35px] w-[380px] mb-1 rounded-none'
-                />
+                  />
               </div>
+                  </div>
             </div>
-            <div className='flex items-center justify-center  mt-4  gap-4 space-x-4'>
+            <div className='flex items-center justify-center  mt-8  gap-4 space-x-4'>
               <button className='text-white text-center text-lg px-6 py-1 rounded-[4px] bg-button'>
                 초기화
               </button>

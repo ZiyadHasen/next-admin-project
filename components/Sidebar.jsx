@@ -130,7 +130,7 @@ ${
                 <li
                   className={`my-2 pl-14
 ${
-  pathname == "/admin/users/mission-management"
+  pathname == "/admin/users/mission-management" || pathname == "/admin/users/mission-management-2"
     ? "bg-[#eee] font-bold py-1"
     : "font-normal"
 }
