@@ -38,9 +38,9 @@ const DataTable2 = () => {
                 className='border bg-inherit px-4 py-2 outline-none'
                 onChange={(e) => setHeader2Option(Number(e.target.value))}
               >
-                <option value={0}>Option 1</option>
-                <option value={1}>Option 2</option>
-                <option value={2}>Option 3</option>
+                <option value={0}>계정</option>
+                <option value={1}>계정</option>
+                <option value={2}>계정</option>
               </select>
             </th>
             <th className='border px-4 py-2'>회원명</th>
@@ -55,9 +55,9 @@ const DataTable2 = () => {
                 className=' border outline-none px-4 bg-inherit py-2 focus:border-none hover:border-none'
                 onChange={(e) => setHeader7Option(Number(e.target.value))}
               >
-                <option value={0}>Option 1</option>
-                <option value={1}>Option 2</option>
-                <option value={2}>Option 3</option>
+                <option value={0}>소셜</option>
+                <option value={1}>소셜</option>
+                <option value={2}>소셜</option>
               </select>
             </th>
 

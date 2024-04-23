@@ -99,7 +99,7 @@ function Page() {
             </div>
 
             {/* third row */}
-            <div className='flex mt-3 gap-8 h-[30px]'>
+            <div className='flex mt-3 gap-6 h-[30px]'>
               <div className='flex-1  flex items-center justify-between border-b-[4px] border-gray-300 '>
                 <div className='text-gray-600 text-sm  font-bold mr-4 '>
                   소셜
@@ -112,7 +112,7 @@ function Page() {
                   />
                 </div>
               </div>
-              <div className='flex-1  flex items-center justify-between border-b-[4px] border-gray-300 '>
+              <div className='  flex flex-1 items-center justify-between border-b-[4px] border-gray-300 '>
                 <div className='text-gray-600 text-sm  font-bold mr-4 '>
                   등록된 기기(주/부)
                 </div>
@@ -120,11 +120,11 @@ function Page() {
                   <input
                     type='text'
                     placeholder='2/1'
-                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
+                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[210px] mb-1 rounded-none'
                   />
                 </div>
               </div>
-              <div className='flex-1  flex items-center justify-between border-b-[4px] border-gray-300 '>
+              <div className=' flex flex-1 items-center justify-between border-b-[4px] border-gray-300 '>
                 <div className='text-gray-600 text-sm  font-bold mr-4 '>
                   리네브 스토어 연결
                 </div>
@@ -132,7 +132,7 @@ function Page() {
                   <input
                     type='text'
                     placeholder='store_id@renevv.store'
-                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
+                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[210px] mb-1 rounded-none'
                   />
                 </div>
               </div>

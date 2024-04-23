@@ -3,7 +3,8 @@ import React from 'react';
 import { useState } from 'react';
 import Sidebar from '../../../../components/Sidebar';
 import Image from 'next/image';
-import Date1 from '../../../../components/Date2';
+import DateComponent from '../../../../components/Date';
+import DateComponent2 from '../../../../components/Date2';
 // import Date1 from "../../../../components/Date";
 import checked from '../../../../data/images/cheked.svg';
 import unChecked from '../../../../data/images/uncheked.svg';
@@ -51,7 +52,7 @@ function Page() {
                     등록일시
                   </div>
                   <div className='ml-6 text-black'>
-                    <Date1 />
+                    <DateComponent2 />
                   </div>
                 </div>
                 <div className='flex-1'></div>
@@ -144,7 +145,7 @@ function Page() {
                     접근 기간 *
                   </div>
                   <div className='ml-6'>
-                    <Date />
+                    <DateComponent />
                   </div>
                   <div
                     className='flex gap-1 justify-center items-center cursor-pointer ml-3'
