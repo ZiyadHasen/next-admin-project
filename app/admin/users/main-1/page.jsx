@@ -1,16 +1,15 @@
 'use client';
 import React, { useState } from 'react';
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../../../components/Sidebar';
 import { useRouter } from 'next/navigation';
 
-import svg from '../../data/images/spin.svg';
 import Image from 'next/image';
-import Date from '../../components/Date';
-import Table from '../../components/tableUser1';
-import cheked from '../../data/images/cheked.svg';
-import unCheked from '../../data/images/uncheked.svg';
-import circle from '../../data/images/circle.svg';
-import checkedCirle from '../../data/images/checkedCircle.svg';
+import Date from '../../../../components/Date';
+import Table from '../../../../components/tableUser1';
+import cheked from '../../../../data/images/cheked.svg';
+import unCheked from '../../../../data/images/uncheked.svg';
+import circle from '../../../../data/images/circle.svg';
+import checkedCirle from '../../../../data/images/checkedCircle.svg';
 
 
 

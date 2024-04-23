@@ -120,7 +120,7 @@ function Page() {
                   <input
                     type='text'
                     placeholder='2/1'
-                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
+                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[210px] mb-1 rounded-none'
                   />
                 </div>
               </div>
@@ -132,7 +132,7 @@ function Page() {
                   <input
                     type='text'
                     placeholder='store_id@renevv.store'
-                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[230px] mb-1 rounded-none'
+                    className='input focus:border-transparent px-2  active:border-none focus:border-none text-gray-600 h-[28px] w-[210px] mb-1 rounded-none'
                   />
                 </div>
               </div>

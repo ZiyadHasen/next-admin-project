@@ -30,7 +30,7 @@ const Date = () => {
     <Space className='date-range' size='small'>
       <DatePicker
         locale={locale}
-        className='h-[40px]  m-0 border-none'
+        className='h-[30px]  m-0 border-none'
         onChange={onChangeStartDate}
         onOpenChange={handleOpenChange}
         visible={startDateVisible}
@@ -38,7 +38,7 @@ const Date = () => {
       <p className='m-0 text-gray-500'>~</p>
       <DatePicker
         locale={locale}
-        className='h-[40px] m-0 border-none'
+        className='h-[30px] m-0 border-none'
         onChange={onChangeEndDate}
       />
     </Space>
