@@ -269,11 +269,11 @@ ${
                   └ 회원/기기 통계
                 </li>
               </Link>
-              <Link href='/admin/users/use-statistics'>
+              <Link href='/admin/users/user-statistics'>
                 <li
                   className={`my-2 pl-14
 ${
-  pathname == '/admin/users/use-statistics'
+  pathname == '/admin/users/user-statistics'
     ? 'bg-[#eee] font-bold py-1'
     : 'font-normal'
 }

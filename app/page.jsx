@@ -11,7 +11,6 @@ function HomePage() {
   const [errors, setErrors] = useState({ email: '', password: '' });
   const router = useRouter();
 
-  
   const validateEmail = (email) => {
     return String(email)
       .toLowerCase()
@@ -37,7 +36,7 @@ function HomePage() {
       setErrors({ email: emailError, password: passwordError });
       return;
     }
-    router.push('/admin/users/user-1');
+    router.push('/admin/users/main');
   };
 
   return (
