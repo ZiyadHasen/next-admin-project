@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { data } from '../data/tableDataUser22';
-import ForwArr from '../data/images/forwarArrow.svg';
-import PrevArr from '../data/images/double-arrow-p.svg';
+
+import dot from '../data/images/dot.svg';
 import Image from 'next/image';
 
 const DataTable2 = () => {
@@ -39,7 +38,7 @@ const DataTable2 = () => {
               <span>1200</span>
               <span>14000</span>
             </td>
-            <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm'>
+            <td className='px-10 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm'>
               |
             </td>
             <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm flex justify-between'>
@@ -47,7 +46,7 @@ const DataTable2 = () => {
               <span>2000</span>
               <span>2000</span>
             </td>
-            <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm'>
+            <td className='px-10 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm'>
               |
             </td>
             <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm flex justify-between'>
@@ -79,29 +78,20 @@ const DataTable2 = () => {
               <span>3000</span>
             </td>
           </tr>
+
           <tr className='bg-white'>
-            <td className='px-5 py-3 border-b border-[] text-start text-[#4F4F4F] text-sm'>
-              2022-09-29
+            <td className='px-5 py-3 border-b border-[#E0E0E0] text-end text-[#4F4F4F] text-sm'></td>
+            <td className='px-5 py-3 border-b border-[#E0E0E0] text-end text-[#4F4F4F] text-sm'></td>
+            <td className='px-5 py-3 border-b border-[#E0E0E0] text-end text-[#4F4F4F] text-sm'></td>
+
+            <td className=' py-3 flex justify-start gap-6 items-center border-b border-[#E0E0E0] text-start text-[#4F4F4F] text-sm'>
+              <Image src={dot} alt='dot' />
+              <Image src={dot} alt='dot' />
+              <Image src={dot} alt='dot' />
             </td>
-            <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm flex justify-between'>
-              <span>1200</span>
-              <span>14000</span>
-            </td>
-            <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm'>
-              |
-            </td>
-            <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm flex justify-between'>
-              <span>1200</span>
-              <span>2000</span>
-              <span>2000</span>
-            </td>
-            <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm'>
-              |
-            </td>
-            <td className='px-5 py-3 border-b border-[] text-center text-[#4F4F4F] text-sm flex justify-between'>
-              <span>1150</span>
-              <span>3000</span>
-            </td>
+
+            <td className=' py-3 border-b border-[#E0E0E0] text-center text-[#4F4F4F] text-sm'></td>
+            <td className='px-5 py-3 border-b border-[#E0E0E0] text-center text-[#4F4F4F] text-sm'></td>
           </tr>
           <tr className='bg-white'>
             <td className='px-5 py-3 border-b border-[] text-start text-[#4F4F4F] text-sm'>
