@@ -26,7 +26,7 @@ const DataTable2 = () => {
   };
 
   return (
-    <div className='container  xxl:[1500px] xxl:[1800px]'>
+    <div className='container  xxl:[1501px] xxl:[1800px]'>
       <table className='min-w-full border-collapse border text-gray-600 border-gray-300'>
         <thead>
           <tr className='bg-transparent'>
