@@ -6,7 +6,6 @@ import Image from 'next/image';
 
 const DataTable2 = () => {
   const [currentPage, setCurrentPage] = useState(1);
-
   const [header8Option, setHeader8Option] = useState(0);
 
   const itemsPerPage = 10;
@@ -26,8 +25,8 @@ const DataTable2 = () => {
   };
 
   return (
-    <div className='container mx-auto'>
-      <table className='min-w-full border-collapse border text-gray-600 border-gray-300'>
+    <div className='container  xxl:[1500px] xxl:[1800px]'>
+      <table className='w-full border-collapse border text-gray-600 border-gray-300'>
         <thead>
           <tr className='bg-transparent'>
             <th className='border py-2'>No</th>
@@ -40,7 +39,7 @@ const DataTable2 = () => {
 
             <th className='border px-4 py-2'>
               <select
-                className=' border px-4 bg-inherit py-2 focus:border-none hover:border-none'
+                className='border px-4 bg-inherit py-2 focus:border-none hover:border-none'
                 onChange={(e) => setHeader8Option(Number(e.target.value))}
               >
                 <option value={0}>등록 일시</option>
@@ -124,11 +123,11 @@ const DataTable2 = () => {
         </tbody>
       </table>
 
-      <div className=' flex items-center justify-center border-t-2 bg-backG mb-6 h-[60px]'>
+      <div className='flex items-center justify-center border-t-2 bg-backG mb-6 h-[60px]'>
         <button
           className={`mr-2 p-2 ${
-            currentPage === 1 ? 'cursor-not-allowed' : ' hover:bg-gray-300'
-          } text-white  rounded-full`}
+            currentPage === 1 ? 'cursor-not-allowed' : 'hover:bg-gray-300'
+          } text-white rounded-full`}
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -139,7 +138,7 @@ const DataTable2 = () => {
             key={page}
             className={`mr-2 p-0 ${
               currentPage === page ? 'text-black' : 'text-gray-400'
-            } mx-2 text-medium font-medium  rounded-full`}
+            } mx-2 text-medium font-medium rounded-full`}
             onClick={() => handlePageChange(page)}
           >
             {page}

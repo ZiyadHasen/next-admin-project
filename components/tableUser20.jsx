@@ -30,7 +30,7 @@ const DataTable2 = () => {
   };
 
   return (
-    <div className='container mx-auto'>
+    <div className='container  xxl:[1500px] xxl:[1800px]'>
       <div className='mb-4 flex justify-between px-4 mt-[4rem] pb-2  border-b-[2px] border-gray-400'>
         <h1 className='font-bold text-base  text-black'>
           검색 {data.length}개

@@ -21,6 +21,15 @@ const config: Config = {
         spoqa: 'Spoqa Han Sans Neo',
       },
     },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      xxl: '1800px',
+      xxxl: '2000px',
+    },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
 };
