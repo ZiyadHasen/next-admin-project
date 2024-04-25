@@ -7,7 +7,6 @@ import Image from 'next/image';
 const Sidebar = ({ children }) => {
   const router = useRouter();
   const pathname = usePathname();
-  console.log('The current route is ', pathname);
   return (
     <>
       <div className='   border-b-2 flex justify-between p-4'>
